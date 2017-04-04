@@ -11,7 +11,11 @@ namespace gsb_pre_alpha
     class DAOGestionnaire
     {
         private static DAOFactory connexion = new DAOFactory();
-        public static List<Gestionnaire> ChargerLogin()
+        /// <summary>
+        /// Permet de charger tout les gestionnaire de la base de données
+        /// </summary>
+        /// <returns>une liste de type gestionnaire</returns>
+        public static List<Gestionnaire> ChargerGestionnaire()
         {
             List<Gestionnaire> LesGestionnaires = new List<Gestionnaire>();
             try
