@@ -41,6 +41,7 @@ namespace applicationGSB
             }
             return LesFamilles;
         }
+
         /// <summary>
         /// Permet de rechercher une famille par rapport à l'identifiant de famille d'un produit
         /// </summary>
