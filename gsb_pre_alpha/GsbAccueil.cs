@@ -145,7 +145,7 @@ namespace gsb_pre_alpha
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void btnFamille_Click(object sender, EventArgs e)
+        private void btnFamille_Click_1(object sender, EventArgs e)
         {
             GsbFamille frmFamille = new GsbFamille();
             frmFamille.Show();
