@@ -64,6 +64,12 @@
     <Compile Include="GsbAccueil.Designer.cs">
       <DependentUpon>GsbAccueil.cs</DependentUpon>
     </Compile>
+    <Compile Include="GsbFamille.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GsbFamille.Designer.cs">
+      <DependentUpon>GsbFamille.cs</DependentUpon>
+    </Compile>
     <Compile Include="Produit.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -72,6 +78,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GsbConnexion.resx">
       <DependentUpon>GsbConnexion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GSbFamille.resx">
+      <DependentUpon>GsbFamille.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

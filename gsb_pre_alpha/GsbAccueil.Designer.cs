@@ -60,6 +60,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.btnFamille = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProduits)).BeginInit();
@@ -82,6 +83,7 @@
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.tabPage1.Controls.Add(this.btnFamille);
             this.tabPage1.Controls.Add(this.btnRafraichire);
             this.tabPage1.Controls.Add(this.btnSupprimer);
             this.tabPage1.Controls.Add(this.btnModifier);
@@ -393,6 +395,18 @@
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Les praticiens";
             // 
+            // btnFamille
+            // 
+            this.btnFamille.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFamille.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.btnFamille.Location = new System.Drawing.Point(493, 98);
+            this.btnFamille.Name = "btnFamille";
+            this.btnFamille.Size = new System.Drawing.Size(110, 38);
+            this.btnFamille.TabIndex = 24;
+            this.btnFamille.Text = "Famille";
+            this.btnFamille.UseVisualStyleBackColor = true;
+            this.btnFamille.Click += new System.EventHandler(this.btnFamille_Click);
+            // 
             // GsbAccueil
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -444,5 +458,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn EffetThera;
         private System.Windows.Forms.DataGridViewTextBoxColumn ContreIndic;
         private System.Windows.Forms.DataGridViewTextBoxColumn Famille;
+        private System.Windows.Forms.Button btnFamille;
     }
 }
