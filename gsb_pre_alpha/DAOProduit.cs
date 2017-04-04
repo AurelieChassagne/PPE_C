@@ -41,7 +41,7 @@ namespace applicationGSB
             }
             return LesProduits;
         }
-
+        
         public static void CreerProduit(Produit prod)
         {
             try
