@@ -13,7 +13,10 @@ namespace applicationGSB
 
         private static DAOFactory connexion = new DAOFactory();
 
-
+        /// <summary>
+        /// Permet de charger tout les produits de la base de données
+        /// </summary>
+        /// <returns>une liste de type Produit</returns>
         public static List<Produit> chargerProduit()
         {
             List<Produit> LesProduits = new List<Produit>();
@@ -41,7 +44,10 @@ namespace applicationGSB
             }
             return LesProduits;
         }
-        
+        /// <summary>
+        /// Permet d'ajouter un produit dans la table produit
+        /// </summary>
+        /// <param name="prod">donne un Produit en paramètre</param>
         public static void CreerProduit(Produit prod)
         {
             try
@@ -55,7 +61,10 @@ namespace applicationGSB
                 Console.WriteLine(e);
             }
         }
-
+        /// <summary>
+        /// Permet de supprimer un produit dans la table produit
+        /// </summary>
+        /// <param name="prod">donne un Produit en paramètre</param>
         public static void SupprimerProduit(Produit prod)
         {
             try
@@ -67,7 +76,10 @@ namespace applicationGSB
                 Console.WriteLine(e);
             }
         }
-
+        /// <summary>
+        /// Permet de modifier un produit dans la table produit
+        /// </summary>
+        /// <param name="prod">donne un Produit en paramètre</param>
         public static void ModifierProduit(Produit prod)
         {
             try
@@ -82,7 +94,11 @@ namespace applicationGSB
                 Console.WriteLine(e);
             }
         }
-
+        /// <summary>
+        /// Permet de remplir dans les texte boxe toute les information du produit
+        /// </summary>
+        /// <param name="Nom">donne le nom du produit ou on veut les informations</param>
+        /// <returns></returns>
         public static Produit RemplirInfoMed(String Nom)
         {
 
@@ -107,7 +123,11 @@ namespace applicationGSB
                 return ProdError;
             }
         }
-
+        /// <summary>
+        /// Permet de trouver un produit par rapport à un morceau de nom
+        /// </summary>
+        /// <param name="nom">nom que l'on cherche</param>
+        /// <returns>une liste de produit correspondant au nom donnée en paramètre</returns>
         public static List<Produit> RechercherProduit(String nom)
         {
             List<Produit> LesProduits = new List<Produit>();

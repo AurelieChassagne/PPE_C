@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AfficherMessageDemandeEventArgs.cs" />
     <Compile Include="DAOFactory.cs" />
     <Compile Include="DAOFamille.cs" />
     <Compile Include="DAOGestionnaire.cs" />

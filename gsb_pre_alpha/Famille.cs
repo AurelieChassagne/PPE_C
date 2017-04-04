@@ -32,7 +32,6 @@ namespace applicationGSB
         }
         #endregion
 
-
         public int GetId()
         {
             return this.id;

@@ -1,4 +1,5 @@
 ﻿using gsb_pre_alpha;
+using PreparationBaseDeDonne;
 using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
@@ -12,6 +13,10 @@ namespace applicationGSB
     {
         private static DAOFactory connexion = new DAOFactory();
 
+        /// <summary>
+        /// Permet de charger dans une liste toute les données par rapport à la famille
+        /// </summary>
+        /// <returns>une liste de famille</returns>
         public static List<Famille> chargerFamille()
         {
             List<Famille> LesFamilles = new List<Famille>();
@@ -36,7 +41,11 @@ namespace applicationGSB
             }
             return LesFamilles;
         }
-
+        /// <summary>
+        /// Permet de rechercher une famille par rapport à l'identifiant de famille d'un produit
+        /// </summary>
+        /// <param name="prod">Passe en paramètre un Produit</param>
+        /// <returns>Retourne une Famille par rapport à l'identifiant famille du produit</returns>
         public static Famille RechercherFamille(Produit prod)
         {
             try
@@ -54,7 +63,11 @@ namespace applicationGSB
                 return null;
             }
         }
-        
+        /// <summary>
+        /// Permet de retrouver l'identifiant d'une famille
+        /// </summary>
+        /// <param name="nom">donne un nom pour trouver l'identifiant correspondant</param>
+        /// <returns>Retourne une famille par rapport au nom donnée</returns>
         public static Famille RechercherIdFamille(string nom)
         {
             try
@@ -72,7 +85,11 @@ namespace applicationGSB
                 return null;
             }
         }
-
+        /// <summary>
+        /// Permet de donner les informations d'une famille
+        /// </summary>
+        /// <param name="Nom">nom d'une famille</param>
+        /// <returns>Retourne une famille par rapport au nom donnée</returns>
         public static Famille RemplirInfoMed(String Nom)
         {
 
@@ -95,6 +112,11 @@ namespace applicationGSB
                 return ProdError;
             }
         }
+        /// <summary>
+        /// Permet de rechercher une famille par rapport à quelque lettre données
+        /// </summary>
+        /// <param name="nom">nom qui devrait correspondre à une famille</param>
+        /// <returns>une liste de famille où le nom demandé correspond</returns>
         public static List<Famille> RechercherNomFamille(String nom)
         {
             List<Famille> LesFamilles = new List<Famille>();
@@ -118,7 +140,10 @@ namespace applicationGSB
             }
             return LesFamilles;
         }
-
+        /// <summary>
+        /// Permet d'ajouter une famille dans la table famille
+        /// </summary>
+        /// <param name="fam">objet de type famille</param>
         public static void CreerFamille(Famille fam)
         {
             try
@@ -130,6 +155,10 @@ namespace applicationGSB
                 Console.WriteLine(e);
             }
         }
+        /// <summary>
+        /// Permet de supprimer une famille de la table famille
+        /// </summary>
+        /// <param name="fam">objet de type famille</param>
         public static void SupprimerFamille(Famille fam)
         {
             try
@@ -141,6 +170,10 @@ namespace applicationGSB
                 Console.WriteLine(e);
             }
         }
+        /// <summary>
+        /// Permet de modifier une famille de la table famille
+        /// </summary>
+        /// <param name="fam">objet de type famille</param>
         public static void ModifierFamille(Famille fam)
         {
             try
