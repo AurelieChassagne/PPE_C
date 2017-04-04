@@ -101,6 +101,10 @@ namespace gsb_pre_alpha
             Famille LaFamille = DAOFamille.RechercherFamille(LeProduits);
             cbxFamille.Text = LaFamille.GetNom();
         }
-        
+
+        private void label18_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
