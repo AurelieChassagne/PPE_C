@@ -16,7 +16,11 @@ namespace gsb_pre_alpha
         {
             InitializeComponent();
         }
-
+        /// <summary>
+        /// Permet de verifier si le login, le mots de passe existe dans la base de données
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnConnection_Click(object sender, EventArgs e)
         {
             if (ConnexionValideLogin() == false)
@@ -33,11 +37,14 @@ namespace gsb_pre_alpha
                 frm.Show();
             }
         }
-
+        /// <summary>
+        /// Verifie si le login existe
+        /// </summary>
+        /// <returns>vrai si la base de donnée contient se login</returns>
         private bool ConnexionValideLogin()
         {
             bool rep = false;
-            List<Gestionnaire> LesGestionnaire = DAOGestionnaire.ChargerLogin();
+            List<Gestionnaire> LesGestionnaire = DAOGestionnaire.ChargerGestionnaire();
             for (int i = 0; i < LesGestionnaire.Count(); i++)
             {
                 if (LesGestionnaire[i].GetLogin() == txtLogin.Text)
@@ -47,10 +54,14 @@ namespace gsb_pre_alpha
             }
             return rep;
         }
+        /// <summary>
+        /// Permet de vérifier que le mot de passe existe
+        /// </summary>
+        /// <returns>vrai si la base de données contient se login</returns>
         private bool ConnexionValideMdp()
         {
             bool rep = false;
-            List<Gestionnaire> LesGestionnaire = DAOGestionnaire.ChargerLogin();
+            List<Gestionnaire> LesGestionnaire = DAOGestionnaire.ChargerGestionnaire();
             for (int i = 0; i < LesGestionnaire.Count(); i++)
             {
                 if (LesGestionnaire[i].GetMdp() == txtMdp.Text)
