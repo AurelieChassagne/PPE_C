@@ -150,10 +150,5 @@ namespace gsb_pre_alpha
             GsbFamille frmFamille = new GsbFamille();
             frmFamille.Show();
         }
-
-        private void cbxChoisirPrat_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
     }
 }
