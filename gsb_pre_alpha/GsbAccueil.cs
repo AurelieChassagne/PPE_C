@@ -150,5 +150,10 @@ namespace gsb_pre_alpha
             GsbFamille frmFamille = new GsbFamille();
             frmFamille.Show();
         }
+
+        private void tabPage2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
