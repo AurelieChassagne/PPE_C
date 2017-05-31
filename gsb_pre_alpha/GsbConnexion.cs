@@ -25,11 +25,11 @@ namespace gsb_pre_alpha
         {
             if (ConnexionValideLogin() == false)
             {
-                lblRep.Text = "Votre login est incorrecte";
+                lblRep.Text = "Votre login est incorrect";
             }
             else if (ConnexionValideMdp() == false)
             {
-                lblRep.Text = "Votre mdp est incorrecte";
+                lblRep.Text = "Votre mdp est incorrect";
             }
             else
             {
