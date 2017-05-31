@@ -50,7 +50,9 @@
     <Compile Include="DAOFactory.cs" />
     <Compile Include="DAOFamille.cs" />
     <Compile Include="DAOGestionnaire.cs" />
+    <Compile Include="DaoPraticiens.cs" />
     <Compile Include="DAOProduit.cs" />
+    <Compile Include="DaoSpecialite.cs" />
     <Compile Include="Famille.cs" />
     <Compile Include="GsbConnexion.cs">
       <SubType>Form</SubType>
@@ -71,9 +73,11 @@
     <Compile Include="GsbFamille.Designer.cs">
       <DependentUpon>GsbFamille.cs</DependentUpon>
     </Compile>
+    <Compile Include="Praticiens.cs" />
     <Compile Include="Produit.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Specialite.cs" />
     <EmbeddedResource Include="GsbAccueil.resx">
       <DependentUpon>GsbAccueil.cs</DependentUpon>
     </EmbeddedResource>
