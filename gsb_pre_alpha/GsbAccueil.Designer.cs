@@ -61,9 +61,51 @@
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.btnChoixSpe = new System.Windows.Forms.Button();
+            this.cbxChoixSpe = new System.Windows.Forms.ComboBox();
+            this.lblChoixSpe = new System.Windows.Forms.Label();
+            this.dgvListPraticien = new System.Windows.Forms.DataGridView();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.btnConfirmer = new System.Windows.Forms.Button();
+            this.gbxDataPrat = new System.Windows.Forms.GroupBox();
+            this.txbCoefConfPrat = new System.Windows.Forms.TextBox();
+            this.txbCoefNotPrat = new System.Windows.Forms.TextBox();
+            this.txtSpecialitePrat = new System.Windows.Forms.TextBox();
+            this.lblCoefConfPrat = new System.Windows.Forms.Label();
+            this.lblCoefNotPrat = new System.Windows.Forms.Label();
+            this.lblSpecialite = new System.Windows.Forms.Label();
+            this.txbMailPrat = new System.Windows.Forms.TextBox();
+            this.txbRaisonSocialPrat = new System.Windows.Forms.TextBox();
+            this.txbAdressePrat = new System.Windows.Forms.TextBox();
+            this.txbContactNomPrat = new System.Windows.Forms.TextBox();
+            this.txbTelPrat = new System.Windows.Forms.TextBox();
+            this.txbCodePrat = new System.Windows.Forms.TextBox();
+            this.lblMailPrat = new System.Windows.Forms.Label();
+            this.lblContactNomPrat = new System.Windows.Forms.Label();
+            this.lblTelPrat = new System.Windows.Forms.Label();
+            this.lblCodePrat = new System.Windows.Forms.Label();
+            this.lblRaisonSocial = new System.Windows.Forms.Label();
+            this.lblAdresse = new System.Windows.Forms.Label();
+            this.cbxChoisirPrat = new System.Windows.Forms.ComboBox();
+            this.lblChoisirPrat = new System.Windows.Forms.Label();
+            this.lblPraticiens = new System.Windows.Forms.Label();
+            this.lblFichePrat = new System.Windows.Forms.Label();
+            this.code = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.noù = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.adresse = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.telephone = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.email = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.specialite = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProduits)).BeginInit();
+            this.tabPage3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvListPraticien)).BeginInit();
+            this.groupBox2.SuspendLayout();
+            this.gbxDataPrat.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -400,12 +442,374 @@
             // tabPage3
             // 
             this.tabPage3.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.tabPage3.Controls.Add(this.btnChoixSpe);
+            this.tabPage3.Controls.Add(this.cbxChoixSpe);
+            this.tabPage3.Controls.Add(this.lblChoixSpe);
+            this.tabPage3.Controls.Add(this.dgvListPraticien);
+            this.tabPage3.Controls.Add(this.btnConfirmer);
+            this.tabPage3.Controls.Add(this.gbxDataPrat);
+            this.tabPage3.Controls.Add(this.cbxChoisirPrat);
+            this.tabPage3.Controls.Add(this.lblChoisirPrat);
+            this.tabPage3.Controls.Add(this.lblPraticiens);
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage3.Size = new System.Drawing.Size(1073, 475);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Les praticiens";
+            // 
+            // btnChoixSpe
+            // 
+            this.btnChoixSpe.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnChoixSpe.Font = new System.Drawing.Font("Impact", 7.25F);
+            this.btnChoixSpe.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnChoixSpe.Location = new System.Drawing.Point(418, 96);
+            this.btnChoixSpe.Margin = new System.Windows.Forms.Padding(4);
+            this.btnChoixSpe.Name = "btnChoixSpe";
+            this.btnChoixSpe.Size = new System.Drawing.Size(80, 23);
+            this.btnChoixSpe.TabIndex = 21;
+            this.btnChoixSpe.Text = "Ok";
+            this.btnChoixSpe.UseVisualStyleBackColor = false;
+            // 
+            // cbxChoixSpe
+            // 
+            this.cbxChoixSpe.FormattingEnabled = true;
+            this.cbxChoixSpe.Location = new System.Drawing.Point(212, 99);
+            this.cbxChoixSpe.Name = "cbxChoixSpe";
+            this.cbxChoixSpe.Size = new System.Drawing.Size(175, 21);
+            this.cbxChoixSpe.TabIndex = 20;
+            // 
+            // lblChoixSpe
+            // 
+            this.lblChoixSpe.AutoSize = true;
+            this.lblChoixSpe.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblChoixSpe.ForeColor = System.Drawing.Color.SteelBlue;
+            this.lblChoixSpe.Location = new System.Drawing.Point(26, 99);
+            this.lblChoixSpe.Name = "lblChoixSpe";
+            this.lblChoixSpe.Size = new System.Drawing.Size(152, 17);
+            this.lblChoixSpe.TabIndex = 19;
+            this.lblChoixSpe.Text = "Choisir une spécialité :";
+            // 
+            // dgvListPraticien
+            // 
+            this.dgvListPraticien.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.dgvListPraticien.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvListPraticien.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.code,
+            this.noù,
+            this.adresse,
+            this.telephone,
+            this.email,
+            this.specialite});
+            this.dgvListPraticien.Location = new System.Drawing.Point(29, 134);
+            this.dgvListPraticien.Name = "dgvListPraticien";
+            this.dgvListPraticien.Size = new System.Drawing.Size(491, 320);
+            this.dgvListPraticien.TabIndex = 18;
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.button1);
+            this.groupBox2.Controls.Add(this.button2);
+            this.groupBox2.Controls.Add(this.button3);
+            this.groupBox2.Location = new System.Drawing.Point(104, 352);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(307, 57);
+            this.groupBox2.TabIndex = 17;
+            this.groupBox2.TabStop = false;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.SteelBlue;
+            this.button1.Font = new System.Drawing.Font("Impact", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.SystemColors.Control;
+            this.button1.Location = new System.Drawing.Point(16, 13);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(87, 37);
+            this.button1.TabIndex = 8;
+            this.button1.Text = "Ajouter";
+            this.button1.UseVisualStyleBackColor = false;
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.SteelBlue;
+            this.button2.Font = new System.Drawing.Font("Impact", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.SystemColors.Control;
+            this.button2.Location = new System.Drawing.Point(205, 13);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(87, 38);
+            this.button2.TabIndex = 10;
+            this.button2.Text = "Supprimer";
+            this.button2.UseVisualStyleBackColor = false;
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.SteelBlue;
+            this.button3.Font = new System.Drawing.Font("Impact", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.ForeColor = System.Drawing.SystemColors.Control;
+            this.button3.Location = new System.Drawing.Point(109, 13);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(87, 37);
+            this.button3.TabIndex = 9;
+            this.button3.Text = "Modifier";
+            this.button3.UseVisualStyleBackColor = false;
+            // 
+            // btnConfirmer
+            // 
+            this.btnConfirmer.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnConfirmer.Font = new System.Drawing.Font("Impact", 7.25F);
+            this.btnConfirmer.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnConfirmer.Location = new System.Drawing.Point(418, 69);
+            this.btnConfirmer.Margin = new System.Windows.Forms.Padding(4);
+            this.btnConfirmer.Name = "btnConfirmer";
+            this.btnConfirmer.Size = new System.Drawing.Size(80, 23);
+            this.btnConfirmer.TabIndex = 16;
+            this.btnConfirmer.Text = "Ok";
+            this.btnConfirmer.UseVisualStyleBackColor = false;
+            // 
+            // gbxDataPrat
+            // 
+            this.gbxDataPrat.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.gbxDataPrat.Controls.Add(this.lblFichePrat);
+            this.gbxDataPrat.Controls.Add(this.txbCoefConfPrat);
+            this.gbxDataPrat.Controls.Add(this.txbCoefNotPrat);
+            this.gbxDataPrat.Controls.Add(this.txtSpecialitePrat);
+            this.gbxDataPrat.Controls.Add(this.groupBox2);
+            this.gbxDataPrat.Controls.Add(this.lblCoefConfPrat);
+            this.gbxDataPrat.Controls.Add(this.lblCoefNotPrat);
+            this.gbxDataPrat.Controls.Add(this.lblSpecialite);
+            this.gbxDataPrat.Controls.Add(this.txbMailPrat);
+            this.gbxDataPrat.Controls.Add(this.txbRaisonSocialPrat);
+            this.gbxDataPrat.Controls.Add(this.txbAdressePrat);
+            this.gbxDataPrat.Controls.Add(this.txbContactNomPrat);
+            this.gbxDataPrat.Controls.Add(this.txbTelPrat);
+            this.gbxDataPrat.Controls.Add(this.txbCodePrat);
+            this.gbxDataPrat.Controls.Add(this.lblMailPrat);
+            this.gbxDataPrat.Controls.Add(this.lblContactNomPrat);
+            this.gbxDataPrat.Controls.Add(this.lblTelPrat);
+            this.gbxDataPrat.Controls.Add(this.lblCodePrat);
+            this.gbxDataPrat.Controls.Add(this.lblRaisonSocial);
+            this.gbxDataPrat.Controls.Add(this.lblAdresse);
+            this.gbxDataPrat.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gbxDataPrat.ForeColor = System.Drawing.Color.SteelBlue;
+            this.gbxDataPrat.Location = new System.Drawing.Point(531, 29);
+            this.gbxDataPrat.Name = "gbxDataPrat";
+            this.gbxDataPrat.Size = new System.Drawing.Size(526, 425);
+            this.gbxDataPrat.TabIndex = 15;
+            this.gbxDataPrat.TabStop = false;
+            // 
+            // txbCoefConfPrat
+            // 
+            this.txbCoefConfPrat.Location = new System.Drawing.Point(228, 304);
+            this.txbCoefConfPrat.Name = "txbCoefConfPrat";
+            this.txbCoefConfPrat.Size = new System.Drawing.Size(183, 26);
+            this.txbCoefConfPrat.TabIndex = 19;
+            // 
+            // txbCoefNotPrat
+            // 
+            this.txbCoefNotPrat.Location = new System.Drawing.Point(228, 272);
+            this.txbCoefNotPrat.Name = "txbCoefNotPrat";
+            this.txbCoefNotPrat.Size = new System.Drawing.Size(183, 26);
+            this.txbCoefNotPrat.TabIndex = 18;
+            // 
+            // txtSpecialitePrat
+            // 
+            this.txtSpecialitePrat.Location = new System.Drawing.Point(161, 240);
+            this.txtSpecialitePrat.Name = "txtSpecialitePrat";
+            this.txtSpecialitePrat.Size = new System.Drawing.Size(250, 26);
+            this.txtSpecialitePrat.TabIndex = 17;
+            // 
+            // lblCoefConfPrat
+            // 
+            this.lblCoefConfPrat.AutoSize = true;
+            this.lblCoefConfPrat.Location = new System.Drawing.Point(19, 307);
+            this.lblCoefConfPrat.Name = "lblCoefConfPrat";
+            this.lblCoefConfPrat.Size = new System.Drawing.Size(203, 20);
+            this.lblCoefConfPrat.TabIndex = 16;
+            this.lblCoefConfPrat.Text = "Coefficient de confiance :";
+            // 
+            // lblCoefNotPrat
+            // 
+            this.lblCoefNotPrat.AutoSize = true;
+            this.lblCoefNotPrat.Location = new System.Drawing.Point(18, 275);
+            this.lblCoefNotPrat.Name = "lblCoefNotPrat";
+            this.lblCoefNotPrat.Size = new System.Drawing.Size(194, 20);
+            this.lblCoefNotPrat.TabIndex = 15;
+            this.lblCoefNotPrat.Text = "Coefficient de notoriété :";
+            // 
+            // lblSpecialite
+            // 
+            this.lblSpecialite.AutoSize = true;
+            this.lblSpecialite.Location = new System.Drawing.Point(21, 243);
+            this.lblSpecialite.Name = "lblSpecialite";
+            this.lblSpecialite.Size = new System.Drawing.Size(88, 20);
+            this.lblSpecialite.TabIndex = 14;
+            this.lblSpecialite.Text = "Spécialité :";
+            // 
+            // txbMailPrat
+            // 
+            this.txbMailPrat.Location = new System.Drawing.Point(195, 201);
+            this.txbMailPrat.Name = "txbMailPrat";
+            this.txbMailPrat.Size = new System.Drawing.Size(308, 26);
+            this.txbMailPrat.TabIndex = 13;
+            // 
+            // txbRaisonSocialPrat
+            // 
+            this.txbRaisonSocialPrat.Location = new System.Drawing.Point(366, 54);
+            this.txbRaisonSocialPrat.Name = "txbRaisonSocialPrat";
+            this.txbRaisonSocialPrat.Size = new System.Drawing.Size(137, 26);
+            this.txbRaisonSocialPrat.TabIndex = 12;
+            // 
+            // txbAdressePrat
+            // 
+            this.txbAdressePrat.Location = new System.Drawing.Point(102, 127);
+            this.txbAdressePrat.Name = "txbAdressePrat";
+            this.txbAdressePrat.Size = new System.Drawing.Size(401, 26);
+            this.txbAdressePrat.TabIndex = 11;
+            // 
+            // txbContactNomPrat
+            // 
+            this.txbContactNomPrat.Location = new System.Drawing.Point(253, 92);
+            this.txbContactNomPrat.Name = "txbContactNomPrat";
+            this.txbContactNomPrat.Size = new System.Drawing.Size(250, 26);
+            this.txbContactNomPrat.TabIndex = 10;
+            // 
+            // txbTelPrat
+            // 
+            this.txbTelPrat.Location = new System.Drawing.Point(253, 169);
+            this.txbTelPrat.Name = "txbTelPrat";
+            this.txbTelPrat.Size = new System.Drawing.Size(250, 26);
+            this.txbTelPrat.TabIndex = 9;
+            // 
+            // txbCodePrat
+            // 
+            this.txbCodePrat.Location = new System.Drawing.Point(78, 55);
+            this.txbCodePrat.Name = "txbCodePrat";
+            this.txbCodePrat.Size = new System.Drawing.Size(56, 26);
+            this.txbCodePrat.TabIndex = 8;
+            // 
+            // lblMailPrat
+            // 
+            this.lblMailPrat.AutoSize = true;
+            this.lblMailPrat.Location = new System.Drawing.Point(21, 204);
+            this.lblMailPrat.Name = "lblMailPrat";
+            this.lblMailPrat.Size = new System.Drawing.Size(134, 20);
+            this.lblMailPrat.TabIndex = 7;
+            this.lblMailPrat.Text = "Mail du contact :";
+            // 
+            // lblContactNomPrat
+            // 
+            this.lblContactNomPrat.AutoSize = true;
+            this.lblContactNomPrat.Location = new System.Drawing.Point(18, 95);
+            this.lblContactNomPrat.Name = "lblContactNomPrat";
+            this.lblContactNomPrat.Size = new System.Drawing.Size(137, 20);
+            this.lblContactNomPrat.TabIndex = 6;
+            this.lblContactNomPrat.Text = "Nom du contact :";
+            // 
+            // lblTelPrat
+            // 
+            this.lblTelPrat.AutoSize = true;
+            this.lblTelPrat.Location = new System.Drawing.Point(21, 172);
+            this.lblTelPrat.Name = "lblTelPrat";
+            this.lblTelPrat.Size = new System.Drawing.Size(93, 20);
+            this.lblTelPrat.TabIndex = 5;
+            this.lblTelPrat.Text = "Téléphone :";
+            // 
+            // lblCodePrat
+            // 
+            this.lblCodePrat.AutoSize = true;
+            this.lblCodePrat.Location = new System.Drawing.Point(19, 57);
+            this.lblCodePrat.Name = "lblCodePrat";
+            this.lblCodePrat.Size = new System.Drawing.Size(59, 20);
+            this.lblCodePrat.TabIndex = 2;
+            this.lblCodePrat.Text = "Code :";
+            // 
+            // lblRaisonSocial
+            // 
+            this.lblRaisonSocial.AutoSize = true;
+            this.lblRaisonSocial.Location = new System.Drawing.Point(240, 57);
+            this.lblRaisonSocial.Name = "lblRaisonSocial";
+            this.lblRaisonSocial.Size = new System.Drawing.Size(120, 20);
+            this.lblRaisonSocial.TabIndex = 3;
+            this.lblRaisonSocial.Text = "Raison sociale :";
+            // 
+            // lblAdresse
+            // 
+            this.lblAdresse.AutoSize = true;
+            this.lblAdresse.Location = new System.Drawing.Point(21, 127);
+            this.lblAdresse.Name = "lblAdresse";
+            this.lblAdresse.Size = new System.Drawing.Size(75, 20);
+            this.lblAdresse.TabIndex = 4;
+            this.lblAdresse.Text = "Adresse :";
+            // 
+            // cbxChoisirPrat
+            // 
+            this.cbxChoisirPrat.FormattingEnabled = true;
+            this.cbxChoisirPrat.Location = new System.Drawing.Point(212, 71);
+            this.cbxChoisirPrat.Name = "cbxChoisirPrat";
+            this.cbxChoisirPrat.Size = new System.Drawing.Size(175, 21);
+            this.cbxChoisirPrat.TabIndex = 14;
+            // 
+            // lblChoisirPrat
+            // 
+            this.lblChoisirPrat.AutoSize = true;
+            this.lblChoisirPrat.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblChoisirPrat.ForeColor = System.Drawing.Color.SteelBlue;
+            this.lblChoisirPrat.Location = new System.Drawing.Point(26, 72);
+            this.lblChoisirPrat.Name = "lblChoisirPrat";
+            this.lblChoisirPrat.Size = new System.Drawing.Size(140, 17);
+            this.lblChoisirPrat.TabIndex = 13;
+            this.lblChoisirPrat.Text = "Choisir un praticien :";
+            // 
+            // lblPraticiens
+            // 
+            this.lblPraticiens.AutoSize = true;
+            this.lblPraticiens.Font = new System.Drawing.Font("Century Gothic", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPraticiens.ForeColor = System.Drawing.Color.SteelBlue;
+            this.lblPraticiens.Location = new System.Drawing.Point(30, 14);
+            this.lblPraticiens.Name = "lblPraticiens";
+            this.lblPraticiens.Size = new System.Drawing.Size(261, 44);
+            this.lblPraticiens.TabIndex = 12;
+            this.lblPraticiens.Text = "Les praticiens";
+            // 
+            // lblFichePrat
+            // 
+            this.lblFichePrat.AutoSize = true;
+            this.lblFichePrat.Font = new System.Drawing.Font("Century Gothic", 14.25F);
+            this.lblFichePrat.Location = new System.Drawing.Point(19, 17);
+            this.lblFichePrat.Name = "lblFichePrat";
+            this.lblFichePrat.Size = new System.Drawing.Size(154, 22);
+            this.lblFichePrat.TabIndex = 20;
+            this.lblFichePrat.Text = "Fiche praticien :";
+            // 
+            // code
+            // 
+            this.code.HeaderText = "Code";
+            this.code.Name = "code";
+            // 
+            // noù
+            // 
+            this.noù.HeaderText = "Nom";
+            this.noù.Name = "noù";
+            // 
+            // adresse
+            // 
+            this.adresse.HeaderText = "Adresse";
+            this.adresse.Name = "adresse";
+            // 
+            // telephone
+            // 
+            this.telephone.HeaderText = "Telephone";
+            this.telephone.Name = "telephone";
+            // 
+            // email
+            // 
+            this.email.HeaderText = "Email";
+            this.email.Name = "email";
+            // 
+            // specialite
+            // 
+            this.specialite.HeaderText = "Spécialité";
+            this.specialite.Name = "specialite";
             // 
             // GsbAccueil
             // 
@@ -420,6 +824,12 @@
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProduits)).EndInit();
+            this.tabPage3.ResumeLayout(false);
+            this.tabPage3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvListPraticien)).EndInit();
+            this.groupBox2.ResumeLayout(false);
+            this.gbxDataPrat.ResumeLayout(false);
+            this.gbxDataPrat.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -459,5 +869,43 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ContreIndic;
         private System.Windows.Forms.DataGridViewTextBoxColumn Famille;
         private System.Windows.Forms.Button btnFamille;
+        private System.Windows.Forms.DataGridView dgvListPraticien;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btnConfirmer;
+        private System.Windows.Forms.GroupBox gbxDataPrat;
+        private System.Windows.Forms.TextBox txbCoefConfPrat;
+        private System.Windows.Forms.TextBox txbCoefNotPrat;
+        private System.Windows.Forms.TextBox txtSpecialitePrat;
+        private System.Windows.Forms.Label lblCoefConfPrat;
+        private System.Windows.Forms.Label lblCoefNotPrat;
+        private System.Windows.Forms.Label lblSpecialite;
+        private System.Windows.Forms.TextBox txbMailPrat;
+        private System.Windows.Forms.TextBox txbRaisonSocialPrat;
+        private System.Windows.Forms.TextBox txbAdressePrat;
+        private System.Windows.Forms.TextBox txbContactNomPrat;
+        private System.Windows.Forms.TextBox txbTelPrat;
+        private System.Windows.Forms.TextBox txbCodePrat;
+        private System.Windows.Forms.Label lblMailPrat;
+        private System.Windows.Forms.Label lblContactNomPrat;
+        private System.Windows.Forms.Label lblTelPrat;
+        private System.Windows.Forms.Label lblCodePrat;
+        private System.Windows.Forms.Label lblRaisonSocial;
+        private System.Windows.Forms.Label lblAdresse;
+        private System.Windows.Forms.ComboBox cbxChoisirPrat;
+        private System.Windows.Forms.Label lblChoisirPrat;
+        private System.Windows.Forms.Label lblPraticiens;
+        private System.Windows.Forms.Button btnChoixSpe;
+        private System.Windows.Forms.ComboBox cbxChoixSpe;
+        private System.Windows.Forms.Label lblChoixSpe;
+        private System.Windows.Forms.DataGridViewTextBoxColumn code;
+        private System.Windows.Forms.DataGridViewTextBoxColumn noù;
+        private System.Windows.Forms.DataGridViewTextBoxColumn adresse;
+        private System.Windows.Forms.DataGridViewTextBoxColumn telephone;
+        private System.Windows.Forms.DataGridViewTextBoxColumn email;
+        private System.Windows.Forms.DataGridViewTextBoxColumn specialite;
+        private System.Windows.Forms.Label lblFichePrat;
     }
 }
