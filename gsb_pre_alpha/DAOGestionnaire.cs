@@ -38,5 +38,24 @@ namespace gsb_pre_alpha
             }
             return LesGestionnaires;
         }
+
+        public static bool VerificationLoginMdp(string login, string mdp)
+        {
+            bool result = false;
+            try
+            {
+                SqlDataReader reader;
+                reader = connexion.execRead($"select * from Gestionnaire where login = '{login}' and mdp = '{mdp}'");
+                if (reader.HasRows == true)
+                {
+                    result = true;
+                }
+            }
+            catch (SqlException e)
+            {
+                Console.WriteLine(e);
+            }
+            return result;
+        }
     }
 }

@@ -23,53 +23,15 @@ namespace gsb_pre_alpha
         /// <param name="e"></param>
         private void btnConnection_Click(object sender, EventArgs e)
         {
-            if (ConnexionValideLogin() == false)
+            if(DAOGestionnaire.VerificationLoginMdp(txtLogin.Text, txtMdp.Text) == false)
             {
-                lblRep.Text = "Votre login est incorrect";
-            }
-            else if (ConnexionValideMdp() == false)
-            {
-                lblRep.Text = "Votre mdp est incorrect";
+                lblRep.Text = "Votre login ou mot de passe est incorrect";
             }
             else
             {
                 GsbAccueil frm = new GsbAccueil();
                 frm.Show();
             }
-        }
-        /// <summary>
-        /// Verifie si le login existe
-        /// </summary>
-        /// <returns>vrai si la base de donnée contient se login</returns>
-        private bool ConnexionValideLogin()
-        {
-            bool rep = false;
-            List<Gestionnaire> LesGestionnaire = DAOGestionnaire.ChargerGestionnaire();
-            for (int i = 0; i < LesGestionnaire.Count(); i++)
-            {
-                if (LesGestionnaire[i].GetLogin() == txtLogin.Text)
-                {
-                    rep = true;
-                }
-            }
-            return rep;
-        }
-        /// <summary>
-        /// Permet de vérifier que le mot de passe existe
-        /// </summary>
-        /// <returns>vrai si la base de données contient se login</returns>
-        private bool ConnexionValideMdp()
-        {
-            bool rep = false;
-            List<Gestionnaire> LesGestionnaire = DAOGestionnaire.ChargerGestionnaire();
-            for (int i = 0; i < LesGestionnaire.Count(); i++)
-            {
-                if (LesGestionnaire[i].GetMdp() == txtMdp.Text)
-                {
-                    rep = true;
-                }
-            }
-            return rep;
         }
     }
 }
