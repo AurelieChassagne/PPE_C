@@ -15,7 +15,7 @@ namespace gsb_pre_alpha
     {
         /// <summary>
         /// permet de remplir au chargement de la page le dataGridView et le comboBoxe
-        /// grace au méthode chargerProduit() et chargerFamille().
+        /// grace au méthode chargerProduit() et chargerFamille()
         /// </summary>
         public GsbAccueil()
         {
