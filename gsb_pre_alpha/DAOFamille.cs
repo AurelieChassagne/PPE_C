@@ -64,6 +64,7 @@ namespace applicationGSB
                 return null;
             }
         }
+
         /// <summary>
         /// Permet de retrouver l'identifiant d'une famille
         /// </summary>

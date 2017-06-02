@@ -4,18 +4,20 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GSB_praticiens
+namespace applicationGSB
 {
     class Specialite 
     {
         private int id;
-        private String nom;
+        private string nom;
+
 
         public Specialite(int id, string nom)
         {
             this.id = id;
             this.nom = nom;
         }
+
 
         public int Id
         {

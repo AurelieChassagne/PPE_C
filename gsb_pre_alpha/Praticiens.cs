@@ -4,20 +4,21 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GSB_praticiens
+namespace applicationGSB
 {
     class Praticiens
     {
 
         private int code;
-        private String raisonSocial;
-        private String adresse;
-        private String tel;
-        private String contactNom;
-        private String contactMail;
+        private string raisonSocial;
+        private string adresse;
+        private string tel;
+        private string contactNom;
+        private string contactMail;
         private int idSpecialite;
-        private Double coefNotoriete;
-        private Double coefConfiance;
+        private double coefNotoriete;
+        private double coefConfiance;
+        private int v;
 
         public int Code
         {
@@ -136,7 +137,8 @@ namespace GSB_praticiens
             }
         }
 
-        public Praticiens(int code, string raisonSocial, string adresse, string tel, string contactNom, string contactMail, int idSpecialite, double coefNotoriete, double coefConfiance)
+        public Praticiens(int code, string raisonSocial, string adresse, string tel, string contactNom,
+         string contactMail, int idSpecialite, double coefNotoriete, double coefConfiance)
         {
             this.code = code;
             this.raisonSocial = raisonSocial;
@@ -148,6 +150,8 @@ namespace GSB_praticiens
             this.coefNotoriete = coefNotoriete;
             this.coefConfiance = coefConfiance;
         }
+
+       
 
 
 
@@ -175,4 +179,4 @@ namespace GSB_praticiens
     }
     #endregion
 }
-}
+

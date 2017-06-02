@@ -1,11 +1,13 @@
-﻿using System;
+﻿using gsb_pre_alpha;
+using PreparationBaseDeDonne;
+using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GSB_praticiens
+namespace applicationGSB
 {
     class DaoSpecialite 
     {
@@ -22,7 +24,7 @@ namespace GSB_praticiens
             try
             {
                 SqlDataReader reader;
-                reader = DAOFactory.execRead("SELECT id, nom FROM Specialite");
+                reader = connexion.execRead("SELECT id, nom FROM Specialite");
                 if (reader.HasRows)
                 {
                     while (reader.Read())
@@ -46,7 +48,7 @@ namespace GSB_praticiens
             Boolean test = false;
             try
             {
-                DAOFactory.execWrite("INSERT INTO Specialite SELECT id, nom) VALUES ('" + spe.Id + "', '" + spe.Nom + "');");
+                connexion.execWrite("INSERT INTO Specialite SELECT id, nom) VALUES ('" + spe.Id + "', '" + spe.Nom + "');");
                 test = true;
             }
             catch (SqlException e)
@@ -62,7 +64,7 @@ namespace GSB_praticiens
             Boolean test = false;
             try
             {
-                DAOFactory.execWrite("DELETE FROM Specialite WHERE Id = " + spe.Id + "");
+                connexion.execWrite("DELETE FROM Specialite WHERE Id = " + spe.Id + "");
                 test = true;
             }
             catch (SqlException e)
@@ -78,7 +80,7 @@ namespace GSB_praticiens
             Boolean test = false;
             try
             {
-                DAOFactory.execWrite("UPDATE Specialite SET Id = '" + spe.Id + "', Nom = '" + spe.Nom +"';");
+                connexion.execWrite("UPDATE Specialite SET Id = '" + spe.Id + "', Nom = '" + spe.Nom +"';");
                 test = true;
             }
             catch (SqlException e)
@@ -88,6 +90,54 @@ namespace GSB_praticiens
             }
             return false;
         }
+
+
+        /// <summary>
+        /// Permet de retrouver l'objet spécialite avec son id
+        /// </summary>
+        /// <param name="idSpe">Passe en paramètre un Produit</param>
+        /// <returns>Retourne une Famille par rapport à l'identifiant famille du produit</returns>
+        public static Specialite RechercherSpecialiteParId(int idSpe)
+        {
+            try
+            {
+                SqlDataReader reader;
+                reader = connexion.execRead($"select * from Specialite spe where id = {idSpe}");
+                reader.Read();
+                Specialite LaSpecialite = new Specialite(reader.GetInt32(0), reader.GetString(1));
+                reader.Close();
+                return LaSpecialite;
+            }
+            catch (SqlException e)
+            {
+                Console.WriteLine(e);
+                return null;
+            }
+        }
+
+        /// <summary>
+        /// Permet de retrouver l'objet spécialite avec un nom
+        /// </summary>
+        /// <param name="nomSpe">donne un nom pour trouver l'identifiant correspondant</param>
+        /// <returns>Retourne une famille par rapport au nom donnée</returns>
+        public static Specialite RechercherSpecialiteParNom(string nomSpe)
+        {
+            try
+            {
+                SqlDataReader reader;
+                reader = connexion.execRead($"select * from Specialite where nom = '{nomSpe}'");
+                reader.Read();
+                Specialite LaSpecialite = new Specialite(reader.GetInt32(0), reader.GetString(1));
+                reader.Close();
+                return LaSpecialite;
+            }
+            catch (SqlException e)
+            {
+                Console.WriteLine(e);
+                return null;
+            }
+        }
+
 
     }
 }

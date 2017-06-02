@@ -36,6 +36,27 @@ namespace gsb_pre_alpha
                 Console.Write(i);
                 cbxFamille.Items.Add(LesFamille[i].GetNom());
             }
+
+            List<Praticiens> LesPraticiens = Praticiens.chargerPraticiens();
+            for (int i = 0; i < LesPraticiens.Count(); i++)
+            {
+                Specialite spe = DaoSpecialite.RechercherSpecialiteParId(LesPraticiens[i].IdSpecialite);
+                Console.Write(i);
+                dgvListPraticien.Rows.Add(LesPraticiens[i].Code, LesPraticiens[i].ContactNom, LesPraticiens[i].Tel,
+                    LesPraticiens[i].Adresse, LesPraticiens[i].ContactMail, spe.Nom);
+                cbxChoisirPrat.Items.Add(LesPraticiens[i].ContactNom);
+            }
+
+
+            List<Specialite> LesSpecialites = Specialite.chargerSpecialite();
+            for (int i = 0; i < LesSpecialites.Count(); i++)
+            {
+                Console.Write(i);
+                cbxSpecialite.Items.Add(LesSpecialites[i].Nom);
+                cbxChoixSpe.Items.Add(LesSpecialites[i].Nom);
+            }
+
+
         }
         /// <summary>
         /// Permet de recharger le dataGridView par rapport au nom que l'on met dans le texte box
@@ -150,5 +171,100 @@ namespace gsb_pre_alpha
             GsbFamille frmFamille = new GsbFamille();
             frmFamille.Show();
         }
+
+        #region Methodes Praticiens
+
+
+        /// <summary>
+        /// Lorsqu'on click deux fois sur le dataGridView on vas remplir les information dans 
+        /// les textes boxe
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void dgvListPraticien_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+           int codePratClick = int.Parse(dgvListPraticien.CurrentRow.Cells[0].Value.ToString());
+            RemplirFichePrat(codePratClick);
+        }
+        /// <summary>
+        /// Permet de remplir les champs des texte boxe
+        /// </summary>
+        /// <param name="codePratClick"></param>
+        private void RemplirFichePrat(int codePratClick)
+        {
+            Praticiens LePraticien;
+            LePraticien = DaoPraticiens.RechercherPraticienParCode(codePratClick);
+            txbCodePrat.Text = LePraticien.Code.ToString();
+            txbRaisonSocialPrat.Text = LePraticien.RaisonSocial;
+            txbContactNomPrat.Text = LePraticien.ContactNom;
+            txbAdressePrat.Text = LePraticien.Adresse;
+            txbTelPrat.Text = LePraticien.Tel;
+            txbMailPrat.Text = LePraticien.ContactMail;
+        
+            Specialite LaSpe = DaoSpecialite.RechercherSpecialiteParId(LePraticien.IdSpecialite);
+            cbxSpecialite.Text = LaSpe.Nom;
+
+            txbCoefNotPrat.Text = LePraticien.CoefNotoriete.ToString();
+            txbCoefConfPrat.Text = LePraticien.CoefConfiance.ToString();
+
+        }
+
+       
+
+        private void cbxChoixSpe_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            dgvListPraticien.Rows.Clear();
+            Specialite spe = DaoSpecialite.RechercherSpecialiteParNom(cbxChoixSpe.Text);
+            List<Praticiens> LesPraticiens = DaoPraticiens.RechercherPraticienParIdSpe(spe.Id);
+            for (int i = 0; i < LesPraticiens.Count(); i++)
+            {
+           
+                Console.Write(i);
+                dgvListPraticien.Rows.Add(LesPraticiens[i].Code, LesPraticiens[i].ContactNom, LesPraticiens[i].Tel,
+                    LesPraticiens[i].Adresse, LesPraticiens[i].ContactMail, spe.Nom);
+            }
+        }
+       
+
+        private void cbxChoisirPrat_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            dgvListPraticien.Rows.Clear();
+            List<Praticiens> LesPraticiens = DaoPraticiens.RechercherLesPraticiensParNom(cbxChoisirPrat.Text);
+            for (int i = 0; i < LesPraticiens.Count(); i++)
+            {
+                Specialite spe = DaoSpecialite.RechercherSpecialiteParId(LesPraticiens[i].IdSpecialite);
+                Console.Write(i);
+                dgvListPraticien.Rows.Add(LesPraticiens[i].Code, LesPraticiens[i].ContactNom, LesPraticiens[i].Tel,
+                    LesPraticiens[i].Adresse, LesPraticiens[i].ContactMail, spe.Nom);
+            }
+        }
+        
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Specialite spe = DaoSpecialite.RechercherSpecialiteParNom(cbxSpecialite.Text);
+            Praticiens LePraticien = new Praticiens(  int.Parse(txbCodePrat.Text) , txbRaisonSocialPrat.Text , 
+            txbAdressePrat.Text , txbTelPrat.Text , txbContactNomPrat.Text, txbMailPrat.Text, spe.Id, 
+            Double.Parse(txbCoefNotPrat.Text), Double.Parse(txbCoefConfPrat.Text));
+
+            DaoPraticiens.CreerPraticien(LePraticien);
+        }
+
+        private void btnModifierPrat_Click(object sender, EventArgs e)
+        {
+            Specialite spe = DaoSpecialite.RechercherSpecialiteParNom(cbxSpecialite.Text);
+            Praticiens LePraticien = new Praticiens(int.Parse(txbCodePrat.Text), txbRaisonSocialPrat.Text,
+            txbAdressePrat.Text, txbTelPrat.Text, txbContactNomPrat.Text, txbMailPrat.Text, spe.Id,
+            Double.Parse(txbCoefNotPrat.Text), Double.Parse(txbCoefConfPrat.Text));
+
+            DaoPraticiens.ModifierPraticien(LePraticien);
+        }
+
+        private void btnSupprimerPrat_Click(object sender, EventArgs e)
+        {
+            Praticiens LePraticien = new Praticiens(Int32.Parse(txbCodePrat.Text), null,null, null, null, null, Int32.Parse(null), double.Parse(null)  , double.Parse(null));
+            DaoPraticiens.SupprimerPraticien(LePraticien);
+        }
+        
+        #endregion
     }
 }
