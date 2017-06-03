@@ -186,6 +186,7 @@ namespace gsb_pre_alpha
            int codePratClick = int.Parse(dgvListPraticien.CurrentRow.Cells[0].Value.ToString());
             RemplirFichePrat(codePratClick);
         }
+
         /// <summary>
         /// Permet de remplir les champs des texte boxe
         /// </summary>
@@ -209,8 +210,11 @@ namespace gsb_pre_alpha
 
         }
 
-       
 
+        /// <summary>
+        ///  Permet d'afficher les praticiens de la spécialité selectionnée dans le tableau
+        /// </summary>
+        /// <param name="sender"></param>
         private void cbxChoixSpe_SelectedIndexChanged(object sender, EventArgs e)
         {
             dgvListPraticien.Rows.Clear();
@@ -224,8 +228,11 @@ namespace gsb_pre_alpha
                     LesPraticiens[i].Adresse, LesPraticiens[i].ContactMail, spe.Nom);
             }
         }
-       
 
+        /// <summary>
+        ///  Permet d'afficher le praticien selectionné dans le tableau
+        /// </summary>
+        /// <param name="sender"></param>
         private void cbxChoisirPrat_SelectedIndexChanged(object sender, EventArgs e)
         {
             dgvListPraticien.Rows.Clear();
@@ -238,7 +245,11 @@ namespace gsb_pre_alpha
                     LesPraticiens[i].Adresse, LesPraticiens[i].ContactMail, spe.Nom);
             }
         }
-        
+
+        /// <summary>
+        ///  Permet de créer un praticien
+        /// </summary>
+        /// <param name="sender"></param>
         private void button1_Click(object sender, EventArgs e)
         {
             Specialite spe = DaoSpecialite.RechercherSpecialiteParNom(cbxSpecialite.Text);
@@ -249,6 +260,11 @@ namespace gsb_pre_alpha
             DaoPraticiens.CreerPraticien(LePraticien);
         }
 
+
+        /// <summary>
+        ///  Permet de modifier un praticien
+        /// </summary>
+        /// <param name="sender"></param>
         private void btnModifierPrat_Click(object sender, EventArgs e)
         {
             Specialite spe = DaoSpecialite.RechercherSpecialiteParNom(cbxSpecialite.Text);
@@ -259,12 +275,62 @@ namespace gsb_pre_alpha
             DaoPraticiens.ModifierPraticien(LePraticien);
         }
 
+        /// <summary>
+        ///  Permet de supprimer un praticien
+        /// </summary>
+        /// <param name="sender"></param>
         private void btnSupprimerPrat_Click(object sender, EventArgs e)
         {
             Praticiens LePraticien = new Praticiens(Int32.Parse(txbCodePrat.Text), null,null, null, null, null, Int32.Parse(null), double.Parse(null)  , double.Parse(null));
             DaoPraticiens.SupprimerPraticien(LePraticien);
         }
-        
+
+
+        /// <summary>
+        ///  Permet de mettre à jour les infos du tableau
+        /// </summary>
+        /// <param name="sender"></param>
+        private void btnRafraichir_Click(object sender, EventArgs e)
+        {
+            dgvListPraticien.Rows.Clear();
+
+            List<Praticiens> LesPraticiens = Praticiens.chargerPraticiens();
+            for (int i = 0; i < LesPraticiens.Count(); i++)
+            {
+                Specialite spe = DaoSpecialite.RechercherSpecialiteParId(LesPraticiens[i].IdSpecialite);
+                Console.Write(i);
+                dgvListPraticien.Rows.Add(LesPraticiens[i].Code, LesPraticiens[i].ContactNom, LesPraticiens[i].Tel,
+                    LesPraticiens[i].Adresse, LesPraticiens[i].ContactMail, spe.Nom);
+               
+            }
+
+        }
+
+
+        private void btnAnnuler_Click(object sender, EventArgs e)
+        {
+
+            foreach (Control ctl in Parent.Controls)
+            {
+                if (ctl.GetType() == typeof(TextBox))
+                    ctl.Text = "";
+            }
+
+            List<Specialite> LesSpecialites = Specialite.chargerSpecialite();
+            for (int i = 0; i < LesSpecialites.Count(); i++)
+            {
+                Console.Write(i);
+                cbxSpecialite.Items.Add(LesSpecialites[i].Nom);
+            }
+        }
+
+
+        private void btnAjoutSpe_Click(object sender, EventArgs e)
+        {
+            FrmSpecialite frmSpe = new FrmSpecialite();
+            frmSpe.Show();
+        }
+
         #endregion
     }
 }

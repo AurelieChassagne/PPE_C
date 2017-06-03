@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GsbAccueil));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.btnFamille = new System.Windows.Forms.Button();
@@ -61,7 +62,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.btnChoixSpe = new System.Windows.Forms.Button();
+            this.btnAjoutSpe = new System.Windows.Forms.Button();
             this.cbxChoixSpe = new System.Windows.Forms.ComboBox();
             this.lblChoixSpe = new System.Windows.Forms.Label();
             this.dgvListPraticien = new System.Windows.Forms.DataGridView();
@@ -71,7 +72,6 @@
             this.telephone = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.email = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.specialite = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnConfirmer = new System.Windows.Forms.Button();
             this.gbxDataPrat = new System.Windows.Forms.GroupBox();
             this.cbxSpecialite = new System.Windows.Forms.ComboBox();
             this.lblFichePrat = new System.Windows.Forms.Label();
@@ -99,6 +99,8 @@
             this.cbxChoisirPrat = new System.Windows.Forms.ComboBox();
             this.lblChoisirPrat = new System.Windows.Forms.Label();
             this.lblPraticiens = new System.Windows.Forms.Label();
+            this.btnAnnuler = new System.Windows.Forms.Button();
+            this.btnRafraichir = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProduits)).BeginInit();
@@ -442,15 +444,15 @@
             // tabPage3
             // 
             this.tabPage3.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.tabPage3.Controls.Add(this.btnChoixSpe);
+            this.tabPage3.Controls.Add(this.btnAjoutSpe);
             this.tabPage3.Controls.Add(this.cbxChoixSpe);
             this.tabPage3.Controls.Add(this.lblChoixSpe);
             this.tabPage3.Controls.Add(this.dgvListPraticien);
-            this.tabPage3.Controls.Add(this.btnConfirmer);
             this.tabPage3.Controls.Add(this.gbxDataPrat);
             this.tabPage3.Controls.Add(this.cbxChoisirPrat);
             this.tabPage3.Controls.Add(this.lblChoisirPrat);
             this.tabPage3.Controls.Add(this.lblPraticiens);
+            this.tabPage3.Font = new System.Drawing.Font("Microsoft Sans Serif", 0.25F);
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
@@ -458,25 +460,27 @@
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Les praticiens";
             // 
-            // btnChoixSpe
+            // btnAjoutSpe
             // 
-            this.btnChoixSpe.BackColor = System.Drawing.Color.SteelBlue;
-            this.btnChoixSpe.Font = new System.Drawing.Font("Impact", 7.25F);
-            this.btnChoixSpe.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnChoixSpe.Location = new System.Drawing.Point(418, 96);
-            this.btnChoixSpe.Margin = new System.Windows.Forms.Padding(4);
-            this.btnChoixSpe.Name = "btnChoixSpe";
-            this.btnChoixSpe.Size = new System.Drawing.Size(80, 23);
-            this.btnChoixSpe.TabIndex = 21;
-            this.btnChoixSpe.Text = "Ok";
-            this.btnChoixSpe.UseVisualStyleBackColor = false;
+            this.btnAjoutSpe.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnAjoutSpe.Font = new System.Drawing.Font("Impact", 7.25F);
+            this.btnAjoutSpe.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnAjoutSpe.Image = ((System.Drawing.Image)(resources.GetObject("btnAjoutSpe.Image")));
+            this.btnAjoutSpe.Location = new System.Drawing.Point(407, 95);
+            this.btnAjoutSpe.Margin = new System.Windows.Forms.Padding(4);
+            this.btnAjoutSpe.Name = "btnAjoutSpe";
+            this.btnAjoutSpe.Size = new System.Drawing.Size(29, 27);
+            this.btnAjoutSpe.TabIndex = 21;
+            this.btnAjoutSpe.UseVisualStyleBackColor = false;
+            this.btnAjoutSpe.Click += new System.EventHandler(this.btnAjoutSpe_Click);
             // 
             // cbxChoixSpe
             // 
+            this.cbxChoixSpe.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
             this.cbxChoixSpe.FormattingEnabled = true;
-            this.cbxChoixSpe.Location = new System.Drawing.Point(212, 99);
+            this.cbxChoixSpe.Location = new System.Drawing.Point(212, 96);
             this.cbxChoixSpe.Name = "cbxChoixSpe";
-            this.cbxChoixSpe.Size = new System.Drawing.Size(188, 21);
+            this.cbxChoixSpe.Size = new System.Drawing.Size(188, 25);
             this.cbxChoixSpe.TabIndex = 20;
             this.cbxChoixSpe.SelectedIndexChanged += new System.EventHandler(this.cbxChoixSpe_SelectedIndexChanged);
             // 
@@ -536,19 +540,6 @@
             // 
             this.specialite.HeaderText = "Spécialité";
             this.specialite.Name = "specialite";
-            // 
-            // btnConfirmer
-            // 
-            this.btnConfirmer.BackColor = System.Drawing.Color.SteelBlue;
-            this.btnConfirmer.Font = new System.Drawing.Font("Impact", 7.25F);
-            this.btnConfirmer.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnConfirmer.Location = new System.Drawing.Point(418, 69);
-            this.btnConfirmer.Margin = new System.Windows.Forms.Padding(4);
-            this.btnConfirmer.Name = "btnConfirmer";
-            this.btnConfirmer.Size = new System.Drawing.Size(80, 23);
-            this.btnConfirmer.TabIndex = 16;
-            this.btnConfirmer.Text = "Ok";
-            this.btnConfirmer.UseVisualStyleBackColor = false;
             // 
             // gbxDataPrat
             // 
@@ -615,12 +606,14 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.btnRafraichir);
+            this.groupBox2.Controls.Add(this.btnAnnuler);
             this.groupBox2.Controls.Add(this.button1);
             this.groupBox2.Controls.Add(this.btnSupprimerPrat);
             this.groupBox2.Controls.Add(this.btnModifierPrat);
-            this.groupBox2.Location = new System.Drawing.Point(104, 352);
+            this.groupBox2.Location = new System.Drawing.Point(45, 352);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(307, 57);
+            this.groupBox2.Size = new System.Drawing.Size(441, 57);
             this.groupBox2.TabIndex = 17;
             this.groupBox2.TabStop = false;
             // 
@@ -629,7 +622,7 @@
             this.button1.BackColor = System.Drawing.Color.SteelBlue;
             this.button1.Font = new System.Drawing.Font("Impact", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.SystemColors.Control;
-            this.button1.Location = new System.Drawing.Point(16, 13);
+            this.button1.Location = new System.Drawing.Point(155, 13);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(87, 37);
             this.button1.TabIndex = 8;
@@ -642,7 +635,7 @@
             this.btnSupprimerPrat.BackColor = System.Drawing.Color.SteelBlue;
             this.btnSupprimerPrat.Font = new System.Drawing.Font("Impact", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSupprimerPrat.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnSupprimerPrat.Location = new System.Drawing.Point(205, 13);
+            this.btnSupprimerPrat.Location = new System.Drawing.Point(345, 13);
             this.btnSupprimerPrat.Name = "btnSupprimerPrat";
             this.btnSupprimerPrat.Size = new System.Drawing.Size(87, 38);
             this.btnSupprimerPrat.TabIndex = 10;
@@ -655,7 +648,7 @@
             this.btnModifierPrat.BackColor = System.Drawing.Color.SteelBlue;
             this.btnModifierPrat.Font = new System.Drawing.Font("Impact", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnModifierPrat.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnModifierPrat.Location = new System.Drawing.Point(109, 13);
+            this.btnModifierPrat.Location = new System.Drawing.Point(249, 13);
             this.btnModifierPrat.Name = "btnModifierPrat";
             this.btnModifierPrat.Size = new System.Drawing.Size(87, 37);
             this.btnModifierPrat.TabIndex = 9;
@@ -788,10 +781,11 @@
             // 
             // cbxChoisirPrat
             // 
+            this.cbxChoisirPrat.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
             this.cbxChoisirPrat.FormattingEnabled = true;
-            this.cbxChoisirPrat.Location = new System.Drawing.Point(212, 71);
+            this.cbxChoisirPrat.Location = new System.Drawing.Point(212, 65);
             this.cbxChoisirPrat.Name = "cbxChoisirPrat";
-            this.cbxChoisirPrat.Size = new System.Drawing.Size(188, 21);
+            this.cbxChoisirPrat.Size = new System.Drawing.Size(188, 25);
             this.cbxChoisirPrat.TabIndex = 14;
             this.cbxChoisirPrat.SelectedIndexChanged += new System.EventHandler(this.cbxChoisirPrat_SelectedIndexChanged);
             // 
@@ -816,6 +810,33 @@
             this.lblPraticiens.Size = new System.Drawing.Size(261, 44);
             this.lblPraticiens.TabIndex = 12;
             this.lblPraticiens.Text = "Les praticiens";
+            // 
+            // btnAnnuler
+            // 
+            this.btnAnnuler.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnAnnuler.Font = new System.Drawing.Font("Impact", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAnnuler.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnAnnuler.Location = new System.Drawing.Point(61, 13);
+            this.btnAnnuler.Name = "btnAnnuler";
+            this.btnAnnuler.Size = new System.Drawing.Size(87, 37);
+            this.btnAnnuler.TabIndex = 22;
+            this.btnAnnuler.Text = "Annuler";
+            this.btnAnnuler.UseVisualStyleBackColor = false;
+            this.btnAnnuler.Click += new System.EventHandler(this.btnAnnuler_Click);
+            // 
+            // btnRafraichir
+            // 
+            this.btnRafraichir.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnRafraichir.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnRafraichir.BackgroundImage")));
+            this.btnRafraichir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnRafraichir.Font = new System.Drawing.Font("Impact", 10.25F);
+            this.btnRafraichir.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnRafraichir.Location = new System.Drawing.Point(16, 14);
+            this.btnRafraichir.Name = "btnRafraichir";
+            this.btnRafraichir.Size = new System.Drawing.Size(35, 36);
+            this.btnRafraichir.TabIndex = 23;
+            this.btnRafraichir.UseVisualStyleBackColor = false;
+            this.btnRafraichir.Click += new System.EventHandler(this.btnRafraichir_Click);
             // 
             // GsbAccueil
             // 
@@ -880,7 +901,6 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btnSupprimerPrat;
         private System.Windows.Forms.Button btnModifierPrat;
-        private System.Windows.Forms.Button btnConfirmer;
         private System.Windows.Forms.GroupBox gbxDataPrat;
         private System.Windows.Forms.TextBox txbCoefConfPrat;
         private System.Windows.Forms.TextBox txbCoefNotPrat;
@@ -902,7 +922,7 @@
         private System.Windows.Forms.ComboBox cbxChoisirPrat;
         private System.Windows.Forms.Label lblChoisirPrat;
         private System.Windows.Forms.Label lblPraticiens;
-        private System.Windows.Forms.Button btnChoixSpe;
+        private System.Windows.Forms.Button btnAjoutSpe;
         private System.Windows.Forms.ComboBox cbxChoixSpe;
         private System.Windows.Forms.Label lblChoixSpe;
         private System.Windows.Forms.DataGridViewTextBoxColumn code;
@@ -913,5 +933,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn specialite;
         private System.Windows.Forms.Label lblFichePrat;
         private System.Windows.Forms.ComboBox cbxSpecialite;
+        private System.Windows.Forms.Button btnAnnuler;
+        private System.Windows.Forms.Button btnRafraichir;
     }
 }

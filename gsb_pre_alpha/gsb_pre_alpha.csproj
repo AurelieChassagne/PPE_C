@@ -54,6 +54,12 @@
     <Compile Include="DAOProduit.cs" />
     <Compile Include="DaoSpecialite.cs" />
     <Compile Include="Famille.cs" />
+    <Compile Include="FrmSpecialite.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmSpecialite.Designer.cs">
+      <DependentUpon>FrmSpecialite.cs</DependentUpon>
+    </Compile>
     <Compile Include="GsbConnexion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -78,6 +84,9 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Specialite.cs" />
+    <EmbeddedResource Include="FrmSpecialite.resx">
+      <DependentUpon>FrmSpecialite.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GsbAccueil.resx">
       <DependentUpon>GsbAccueil.cs</DependentUpon>
     </EmbeddedResource>
