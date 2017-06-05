@@ -48,9 +48,12 @@
   <ItemGroup>
     <Compile Include="AfficherMessageDemandeEventArgs.cs" />
     <Compile Include="DAOFactory.cs" />
+    <Compile Include="DAOSecteur.cs" />
     <Compile Include="DAOFamille.cs" />
     <Compile Include="DAOGestionnaire.cs" />
+    <Compile Include="DAOVisiteur.cs" />
     <Compile Include="DAOProduit.cs" />
+    <Compile Include="Secteur.cs" />
     <Compile Include="Famille.cs" />
     <Compile Include="GsbConnexion.cs">
       <SubType>Form</SubType>
@@ -71,6 +74,7 @@
     <Compile Include="GsbFamille.Designer.cs">
       <DependentUpon>GsbFamille.cs</DependentUpon>
     </Compile>
+    <Compile Include="Visiteur.cs" />
     <Compile Include="Produit.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

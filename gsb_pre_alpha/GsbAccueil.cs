@@ -13,6 +13,14 @@ namespace gsb_pre_alpha
 {
     public partial class GsbAccueil : Form
     {
+
+
+        // =================================================================================================================================
+        // ================================================ PARTIE DES PRODUITS ET FAMILLES ================================================
+        // =================================================================================================================================
+
+
+
         /// <summary>
         /// permet de remplir au chargement de la page le dataGridView et le comboBoxe
         /// grace au méthode chargerProduit() et chargerFamille()
@@ -35,7 +43,7 @@ namespace gsb_pre_alpha
             {
                 Console.Write(i);
                 cbxFamille.Items.Add(LesFamille[i].GetNom());
-            }
+            }            
         }
         /// <summary>
         /// Permet de recharger le dataGridView par rapport au nom que l'on met dans le texte box
@@ -55,7 +63,7 @@ namespace gsb_pre_alpha
                     LeProduit[i].GetContreIndic(), LeProduit[i].GetEfets(), fam.GetNom());
             }
         }
-        
+
         /// <summary>
         /// Lorsqu'on appuie sur le bouton ajouter on appele la méthode CreerProduit pour l'ajouter à 
         /// la base de données
@@ -78,7 +86,7 @@ namespace gsb_pre_alpha
         private void btnModifier_Click(object sender, EventArgs e)
         {
             Famille LaFamille = DAOFamille.RechercherIdFamille(cbxFamille.Text.ToString());
-            Produit LeProduit = new Produit(Int32.Parse(txtReference.Text), txtNom.Text, txtDosage.Text, 
+            Produit LeProduit = new Produit(Int32.Parse(txtReference.Text), txtNom.Text, txtDosage.Text,
                 Double.Parse(txtPrix.Text), txtContre.Text, txtEffet.Text, LaFamille.GetId());
             DAOProduit.ModifierProduit(LeProduit);
         }
@@ -154,6 +162,62 @@ namespace gsb_pre_alpha
         private void tabPage2_Click(object sender, EventArgs e)
         {
 
+        }
+
+
+
+
+        // ==============================================================================================================================
+        // ================================================ PARTIE DES VISITEURS ET SECTEURS ============================================
+        // ==============================================================================================================================
+
+
+
+        private void btnVisiteurAjouter_Click(object sender, EventArgs e)
+        {/*
+            Secteur LeSecteur = DAOSecteur.RechecherIdSecteurByNom(cbxVisiteurSecteur.Text.ToString());
+            Visiteur v = new Visiteur(txbVisiteurNom.Text, txtDosage.Text, Double.Parse(txtPrix.Text), txtContre.Text,
+                txtEffet.Text, LaFamille.GetId());
+            DAOProduit.CreerProduit(LeProduit);*/
+        }
+
+        private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+            if (tabControl1.SelectedIndex == 1)
+            {
+                List<Visiteur> LesVisiteurs = DAOVisiteur.chargerVisiteurs();
+                for (int i = 0; i < LesVisiteurs.Count(); i++)
+                {
+
+                    Console.Write(i);
+
+                    dgvVisiteurs.Rows.Add(LesVisiteurs[i].getId(), LesVisiteurs[i].getNom(), LesVisiteurs[i].getPrenom(),
+                    LesVisiteurs[i].getType(), LesVisiteurs[i].getAdresse(), LesVisiteurs[i].getCP(), LesVisiteurs[i].getVille(),
+                    LesVisiteurs[i].getDateEmbauche(), LesVisiteurs[i].getIdSecteur(), LesVisiteurs[i].getLogin(), LesVisiteurs[i].getMotDePasse());
+                }
+            }
+        }
+
+        private void btnVisiteurRafraichir_Click(object sender, EventArgs e)
+        {
+            List<Visiteur> LesVisiteurs = DAOVisiteur.chargerVisiteurs();
+            for (int i = 0; i < LesVisiteurs.Count(); i++)
+            {
+                dgvVisiteurs.Rows.Clear();
+
+                Console.Write(i);
+
+                dgvVisiteurs.Rows.Add(LesVisiteurs[i].getId(), LesVisiteurs[i].getNom(), LesVisiteurs[i].getPrenom(),
+                LesVisiteurs[i].getType(), LesVisiteurs[i].getAdresse(), LesVisiteurs[i].getCP(), LesVisiteurs[i].getVille(),
+                LesVisiteurs[i].getDateEmbauche(), LesVisiteurs[i].getIdSecteur(), LesVisiteurs[i].getLogin(), LesVisiteurs[i].getMotDePasse());
+            }
+        }
+
+        private void btnVisiteurSupprimer_Click(object sender, EventArgs e)
+        {
+            Visiteur v = new Visiteur(Int32.Parse(txtReference.Text));
+            DAOVisiteur.SupprimerVisiteur(v);
         }
     }
 }
