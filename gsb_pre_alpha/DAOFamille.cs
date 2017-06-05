@@ -6,6 +6,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace applicationGSB
 {
@@ -37,7 +38,7 @@ namespace applicationGSB
             }
             catch (SqlException e)
             {
-                Console.WriteLine(e);
+                MessageBox.Show("Impossible de charger toute les données par rapport à la famille : " + e, "Erreur de chargement des données", MessageBoxButtons.OK);
             }
             return LesFamilles;
         }
@@ -59,7 +60,7 @@ namespace applicationGSB
             }
             catch (SqlException e)
             {
-                Console.WriteLine(e);
+                MessageBox.Show("Impossible de rechercher une famille par rapport à " + prod.GetIdFamille() + " : " + e, "Erreur de recherche ", MessageBoxButtons.OK);
                 return null;
             }
         }
@@ -81,7 +82,7 @@ namespace applicationGSB
             }
             catch (SqlException e)
             {
-                Console.WriteLine(e);
+                MessageBox.Show("Impossible de retrouver l'identifiant de famille " + nom + " : " + e, "Erreur d'itentifiant famille", MessageBoxButtons.OK);
                 return null;
             }
         }
@@ -106,7 +107,7 @@ namespace applicationGSB
             }
             catch (SqlException e)
             {
-                Console.WriteLine(e);
+                MessageBox.Show("Impossile de remplir les informations de la famille " + Nom + " : " + e, "Erreur de donner", MessageBoxButtons.OK);
                 Famille ProdError = new Famille(0, "ERREUR");
 
                 return ProdError;
@@ -136,7 +137,7 @@ namespace applicationGSB
             }
             catch (SqlException e)
             {
-                Console.WriteLine(e);
+                MessageBox.Show("Impossible de rechercher la famille qui commence par " + nom + " : " + e, "Erreur de recherche", MessageBoxButtons.OK);
             }
             return LesFamilles;
         }
@@ -152,7 +153,7 @@ namespace applicationGSB
             }
             catch (SqlException e)
             {
-                Console.WriteLine(e);
+                MessageBox.Show("Impossible d'ajouter une famille : " + e, "Erreur d'ajout", MessageBoxButtons.OK);
             }
         }
         /// <summary>
@@ -167,7 +168,7 @@ namespace applicationGSB
             }
             catch (SqlException e)
             {
-                Console.WriteLine(e);
+                MessageBox.Show("Impossible de supprimer une famille : " + e, "Erreur de suppression", MessageBoxButtons.OK);
             }
         }
         /// <summary>
@@ -183,7 +184,7 @@ namespace applicationGSB
             }
             catch (SqlException e)
             {
-                Console.WriteLine(e);
+                MessageBox.Show("Impossible de modifier " + fam + " : " + e, "Erreur de modification", MessageBoxButtons.OK);
             }
         }
     }
