@@ -5,6 +5,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace gsb_pre_alpha
 {
@@ -34,7 +35,7 @@ namespace gsb_pre_alpha
             }
             catch (SqlException e)
             {
-                Console.WriteLine(e);
+                MessageBox.Show("Impossible de charger les gestionnaire de la base de données : " + e, "Erreur lors du chargement des données", MessageBoxButtons.OK);
             }
             return LesGestionnaires;
         }

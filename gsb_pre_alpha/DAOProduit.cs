@@ -5,6 +5,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace applicationGSB
 {
@@ -40,7 +41,7 @@ namespace applicationGSB
             }
             catch (SqlException e)
             {
-                Console.WriteLine(e);
+                MessageBox.Show("Impossible de charger toute les données par rapport au produit : " + e, "Erreur de chargement des données", MessageBoxButtons.OK);
             }
             return LesProduits;
         }
@@ -58,7 +59,7 @@ namespace applicationGSB
             }
             catch (SqlException e)
             {
-                Console.WriteLine(e);
+                MessageBox.Show("Impossible d'ajouter un produit dans la table produit :" + e, "Erreur d'ajout de produit", MessageBoxButtons.OK);
             }
         }
         /// <summary>
@@ -73,7 +74,7 @@ namespace applicationGSB
             }
             catch (SqlException e)
             {
-                Console.WriteLine(e);
+                MessageBox.Show("Impossible de supprimer le produit " + prod.GetReference() + " : " + e, "Erreur de suppression", MessageBoxButtons.OK);
             }
         }
         /// <summary>
@@ -91,7 +92,7 @@ namespace applicationGSB
             }
             catch (SqlException e)
             {
-                Console.WriteLine(e);
+                MessageBox.Show("Impossible de modifier le produit " + prod.GetNom() + " : " + e, "Erreur de modification", MessageBoxButtons.OK);
             }
         }
         /// <summary>
@@ -117,7 +118,7 @@ namespace applicationGSB
             }
             catch (SqlException e)
             {
-                Console.WriteLine(e);
+                MessageBox.Show("Impossible de remplir les texte boxe : " + e, "Erreur de remplissage", MessageBoxButtons.OK);
                 Produit ProdError = new Produit(0, "ERREUR", "ERREUR", 0, "ERREUR", "ERREUR", 0);
 
                 return ProdError;
@@ -148,7 +149,7 @@ namespace applicationGSB
             }
             catch (SqlException e)
             {
-                Console.WriteLine(e);
+                MessageBox.Show("Impossible de retrouver un produit par rapport à : " + nom + " : " + e, "Erreur de nom de produit", MessageBoxButtons.OK);
             }
             return LesProduits;
         }

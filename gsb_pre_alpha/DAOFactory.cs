@@ -4,6 +4,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace applicationGSB
 {
@@ -20,9 +21,16 @@ namespace applicationGSB
         /// </summary>
         private void connection()
         {
-            sqlConnection = new SqlConnection("Data Source=" + dataSource + "; Initial Catalog=" + catalog
-                + ";Persist Security Info=True;User ID=" + user + "; Password=" + password);
-            sqlConnection.Open();
+            try
+            {
+                sqlConnection = new SqlConnection("Data Source=" + dataSource + "; Initial Catalog=" + catalog
+                    + ";Persist Security Info=True;User ID=" + user + "; Password=" + password);
+                sqlConnection.Open();
+            }
+            catch (SqlException e)
+            {
+                MessageBox.Show("Impossible de se connecter à la base de données : " + e, "Erreur de connection", MessageBoxButtons.OK);
+            }
         }
         /// <summary>
         /// Déconnection de la base de données
