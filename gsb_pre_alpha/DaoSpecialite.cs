@@ -72,7 +72,7 @@ namespace applicationGSB
                 Console.WriteLine(e);
                 test = false;
             }
-            return false;
+            return test;
         }
 
         public static Boolean ModifierSpecialite(Specialite spe)
@@ -88,7 +88,7 @@ namespace applicationGSB
                 Console.WriteLine(e);
                 test = false;
             }
-            return false;
+            return test;
         }
 
 

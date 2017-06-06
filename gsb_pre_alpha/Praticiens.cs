@@ -18,7 +18,6 @@ namespace applicationGSB
         private int idSpecialite;
         private double coefNotoriete;
         private double coefConfiance;
-        private int v;
 
         public int Code
         {
@@ -164,17 +163,17 @@ namespace applicationGSB
         //envoie d'objet
         public static Boolean creerPraticiens(Praticiens prat)
         {
-            return DaoPraticiens.CreerPraticiens(prat);
+            return DaoPraticiens.CreerPraticien(prat);
         }
 
         public static Boolean SupprimerPraticiens(Praticiens prat)
         {
-            return DaoPraticiens.SupprimerPraticiens(prat);
+            return DaoPraticiens.SupprimerPraticien(prat);
         }
 
         public static Boolean ModifierPraticiens(Praticiens prat)
         {
-            return DaoPraticiens.ModifierPraticiens(prat);
+            return DaoPraticiens.ModifierPraticien(prat);
         }
     }
     #endregion

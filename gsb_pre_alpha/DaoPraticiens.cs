@@ -77,7 +77,7 @@ namespace applicationGSB
                 Console.WriteLine(e);
                 test = false;
             }
-            return false;
+            return test;
         }
 
         public static Boolean ModifierPraticien(Praticiens prat)
@@ -96,7 +96,7 @@ namespace applicationGSB
                 Console.WriteLine(e);
                 test = false;
             }
-            return false;
+            return test;
         }
 
 
