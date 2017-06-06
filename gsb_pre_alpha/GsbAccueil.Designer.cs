@@ -60,6 +60,47 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.btnVisiteurModifier = new System.Windows.Forms.Button();
+            this.btnVisiteurAjouter = new System.Windows.Forms.Button();
+            this.btnVisiteurSupprimer = new System.Windows.Forms.Button();
+            this.btnVisiteurRafraichir = new System.Windows.Forms.Button();
+            this.dgvVisiteurs = new System.Windows.Forms.DataGridView();
+            this.dgvVisiteurID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvVisiteurNom = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvVisiteurPrenom = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvVisiteurType = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvVisiteurAdresse = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvVisiteurCP = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvVisiteurVille = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvVisiteurDateEmbauche = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvVisiteurSecteur = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvVisiteurLogin = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvVisiteurMdp = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cbxVisiteurSecteur = new System.Windows.Forms.ComboBox();
+            this.lblVisiteurDateEmbauche = new System.Windows.Forms.Label();
+            this.txbVisiteurDateEmbauche = new System.Windows.Forms.TextBox();
+            this.lblVisiteurSecteur = new System.Windows.Forms.Label();
+            this.lblVisiteurLogin = new System.Windows.Forms.Label();
+            this.txbVisiteurLogin = new System.Windows.Forms.TextBox();
+            this.lblVisiteurMdp = new System.Windows.Forms.Label();
+            this.txbVisiteurMdp = new System.Windows.Forms.TextBox();
+            this.lblVisiteurCodePostal = new System.Windows.Forms.Label();
+            this.txbVisiteurCP = new System.Windows.Forms.TextBox();
+            this.lblVisiteurVille = new System.Windows.Forms.Label();
+            this.txbVisiteurVille = new System.Windows.Forms.TextBox();
+            this.lblVisiteurID = new System.Windows.Forms.Label();
+            this.lblVisiteurNom = new System.Windows.Forms.Label();
+            this.lblVisiteurPrenom = new System.Windows.Forms.Label();
+            this.lblVisiteurType = new System.Windows.Forms.Label();
+            this.lblVisiteurAdresse = new System.Windows.Forms.Label();
+            this.lblRecherche = new System.Windows.Forms.Label();
+            this.txbVisiteurNom = new System.Windows.Forms.TextBox();
+            this.txbVisiteurPrenom = new System.Windows.Forms.TextBox();
+            this.txbVisiteurType = new System.Windows.Forms.TextBox();
+            this.txbVisiteurAdresse = new System.Windows.Forms.TextBox();
+            this.txbVisiteurID = new System.Windows.Forms.TextBox();
+            this.txbVisiteurRecherche = new System.Windows.Forms.TextBox();
+            this.lblVisiteurs = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
@@ -83,53 +124,12 @@
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.lblPraticiens = new System.Windows.Forms.Label();
-            this.lblVisiteurs = new System.Windows.Forms.Label();
-            this.txbVisiteurRecherche = new System.Windows.Forms.TextBox();
-            this.txbVisiteurID = new System.Windows.Forms.TextBox();
-            this.txbVisiteurAdresse = new System.Windows.Forms.TextBox();
-            this.txbVisiteurType = new System.Windows.Forms.TextBox();
-            this.txbVisiteurPrenom = new System.Windows.Forms.TextBox();
-            this.txbVisiteurNom = new System.Windows.Forms.TextBox();
-            this.lblRecherche = new System.Windows.Forms.Label();
-            this.lblVisiteurAdresse = new System.Windows.Forms.Label();
-            this.lblVisiteurType = new System.Windows.Forms.Label();
-            this.lblVisiteurPrenom = new System.Windows.Forms.Label();
-            this.lblVisiteurNom = new System.Windows.Forms.Label();
-            this.lblVisiteurID = new System.Windows.Forms.Label();
-            this.lblVisiteurVille = new System.Windows.Forms.Label();
-            this.txbVisiteurVille = new System.Windows.Forms.TextBox();
-            this.lblVisiteurCodePostal = new System.Windows.Forms.Label();
-            this.txbVisiteurCP = new System.Windows.Forms.TextBox();
-            this.lblVisiteurMdp = new System.Windows.Forms.Label();
-            this.txbVisiteurMdp = new System.Windows.Forms.TextBox();
-            this.lblVisiteurLogin = new System.Windows.Forms.Label();
-            this.txbVisiteurLogin = new System.Windows.Forms.TextBox();
-            this.lblVisiteurSecteur = new System.Windows.Forms.Label();
-            this.lblVisiteurDateEmbauche = new System.Windows.Forms.Label();
-            this.txbVisiteurDateEmbauche = new System.Windows.Forms.TextBox();
-            this.txbVisiteurSecteur = new System.Windows.Forms.ComboBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.btnVisiteurRafraichir = new System.Windows.Forms.Button();
-            this.btnVisiteurSupprimer = new System.Windows.Forms.Button();
-            this.btnVisiteurAjouter = new System.Windows.Forms.Button();
-            this.btnVisiteurModifier = new System.Windows.Forms.Button();
-            this.dgvVisiteurID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvVisiteurNom = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvVisiteurPrenom = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvVisiteurType = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvVisiteurAdresse = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvVisiteurCP = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvVisiteurVille = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvVisiteurDateEmbauche = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvVisiteurSecteur = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvVisiteurLogin = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvVisiteurMdp = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProduits)).BeginInit();
             this.tabPage2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvVisiteurs)).BeginInit();
             this.tabPage3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -145,6 +145,7 @@
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(1081, 501);
             this.tabControl1.TabIndex = 0;
+            this.tabControl1.SelectedIndexChanged += new System.EventHandler(this.tabControl1_SelectedIndexChanged);
             // 
             // tabPage1
             // 
@@ -187,7 +188,7 @@
             this.btnFamille.Name = "btnFamille";
             this.btnFamille.Size = new System.Drawing.Size(110, 38);
             this.btnFamille.TabIndex = 24;
-            this.btnFamille.Text = "Famille";
+            this.btnFamille.Text = "Familles";
             this.btnFamille.UseVisualStyleBackColor = true;
             this.btnFamille.Click += new System.EventHandler(this.btnFamille_Click_1);
             // 
@@ -199,7 +200,7 @@
             this.btnRafraichire.Name = "btnRafraichire";
             this.btnRafraichire.Size = new System.Drawing.Size(110, 38);
             this.btnRafraichire.TabIndex = 23;
-            this.btnRafraichire.Text = "Rafraichire";
+            this.btnRafraichire.Text = "Rafraîchir";
             this.btnRafraichire.UseVisualStyleBackColor = true;
             this.btnRafraichire.Click += new System.EventHandler(this.btnRafraichire_Click);
             // 
@@ -460,8 +461,8 @@
             this.tabPage2.Controls.Add(this.btnVisiteurAjouter);
             this.tabPage2.Controls.Add(this.btnVisiteurSupprimer);
             this.tabPage2.Controls.Add(this.btnVisiteurRafraichir);
-            this.tabPage2.Controls.Add(this.dataGridView1);
-            this.tabPage2.Controls.Add(this.txbVisiteurSecteur);
+            this.tabPage2.Controls.Add(this.dgvVisiteurs);
+            this.tabPage2.Controls.Add(this.cbxVisiteurSecteur);
             this.tabPage2.Controls.Add(this.lblVisiteurDateEmbauche);
             this.tabPage2.Controls.Add(this.txbVisiteurDateEmbauche);
             this.tabPage2.Controls.Add(this.lblVisiteurSecteur);
@@ -493,6 +494,394 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Les visiteurs";
             this.tabPage2.Click += new System.EventHandler(this.tabPage2_Click);
+            // 
+            // btnVisiteurModifier
+            // 
+            this.btnVisiteurModifier.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVisiteurModifier.Location = new System.Drawing.Point(182, 37);
+            this.btnVisiteurModifier.Name = "btnVisiteurModifier";
+            this.btnVisiteurModifier.Size = new System.Drawing.Size(105, 34);
+            this.btnVisiteurModifier.TabIndex = 31;
+            this.btnVisiteurModifier.Text = "Modifier";
+            this.btnVisiteurModifier.UseVisualStyleBackColor = true;
+            // 
+            // btnVisiteurAjouter
+            // 
+            this.btnVisiteurAjouter.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVisiteurAjouter.Location = new System.Drawing.Point(38, 97);
+            this.btnVisiteurAjouter.Name = "btnVisiteurAjouter";
+            this.btnVisiteurAjouter.Size = new System.Drawing.Size(105, 34);
+            this.btnVisiteurAjouter.TabIndex = 30;
+            this.btnVisiteurAjouter.Text = "Ajouter";
+            this.btnVisiteurAjouter.UseVisualStyleBackColor = true;
+            this.btnVisiteurAjouter.Click += new System.EventHandler(this.btnVisiteurAjouter_Click);
+            // 
+            // btnVisiteurSupprimer
+            // 
+            this.btnVisiteurSupprimer.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVisiteurSupprimer.Location = new System.Drawing.Point(182, 97);
+            this.btnVisiteurSupprimer.Name = "btnVisiteurSupprimer";
+            this.btnVisiteurSupprimer.Size = new System.Drawing.Size(105, 34);
+            this.btnVisiteurSupprimer.TabIndex = 29;
+            this.btnVisiteurSupprimer.Text = "Supprimer";
+            this.btnVisiteurSupprimer.UseVisualStyleBackColor = true;
+            this.btnVisiteurSupprimer.Click += new System.EventHandler(this.btnVisiteurSupprimer_Click);
+            // 
+            // btnVisiteurRafraichir
+            // 
+            this.btnVisiteurRafraichir.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVisiteurRafraichir.Location = new System.Drawing.Point(38, 37);
+            this.btnVisiteurRafraichir.Name = "btnVisiteurRafraichir";
+            this.btnVisiteurRafraichir.Size = new System.Drawing.Size(105, 34);
+            this.btnVisiteurRafraichir.TabIndex = 28;
+            this.btnVisiteurRafraichir.Text = "Rafraîchir";
+            this.btnVisiteurRafraichir.UseVisualStyleBackColor = true;
+            this.btnVisiteurRafraichir.Click += new System.EventHandler(this.btnVisiteurRafraichir_Click);
+            // 
+            // dgvVisiteurs
+            // 
+            this.dgvVisiteurs.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvVisiteurs.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvVisiteurID,
+            this.dgvVisiteurNom,
+            this.dgvVisiteurPrenom,
+            this.dgvVisiteurType,
+            this.dgvVisiteurAdresse,
+            this.dgvVisiteurCP,
+            this.dgvVisiteurVille,
+            this.dgvVisiteurDateEmbauche,
+            this.dgvVisiteurSecteur,
+            this.dgvVisiteurLogin,
+            this.dgvVisiteurMdp});
+            this.dgvVisiteurs.Location = new System.Drawing.Point(10, 149);
+            this.dgvVisiteurs.Name = "dgvVisiteurs";
+            this.dgvVisiteurs.Size = new System.Drawing.Size(753, 305);
+            this.dgvVisiteurs.TabIndex = 27;
+            // 
+            // dgvVisiteurID
+            // 
+            this.dgvVisiteurID.HeaderText = "ID";
+            this.dgvVisiteurID.Name = "dgvVisiteurID";
+            this.dgvVisiteurID.Width = 30;
+            // 
+            // dgvVisiteurNom
+            // 
+            this.dgvVisiteurNom.HeaderText = "Nom";
+            this.dgvVisiteurNom.Name = "dgvVisiteurNom";
+            this.dgvVisiteurNom.Width = 70;
+            // 
+            // dgvVisiteurPrenom
+            // 
+            this.dgvVisiteurPrenom.HeaderText = "Prénom";
+            this.dgvVisiteurPrenom.Name = "dgvVisiteurPrenom";
+            this.dgvVisiteurPrenom.Width = 70;
+            // 
+            // dgvVisiteurType
+            // 
+            this.dgvVisiteurType.HeaderText = "Type";
+            this.dgvVisiteurType.Name = "dgvVisiteurType";
+            this.dgvVisiteurType.Width = 70;
+            // 
+            // dgvVisiteurAdresse
+            // 
+            this.dgvVisiteurAdresse.HeaderText = "Adresse";
+            this.dgvVisiteurAdresse.Name = "dgvVisiteurAdresse";
+            this.dgvVisiteurAdresse.Width = 70;
+            // 
+            // dgvVisiteurCP
+            // 
+            this.dgvVisiteurCP.HeaderText = "CP";
+            this.dgvVisiteurCP.Name = "dgvVisiteurCP";
+            this.dgvVisiteurCP.Width = 50;
+            // 
+            // dgvVisiteurVille
+            // 
+            this.dgvVisiteurVille.HeaderText = "Ville";
+            this.dgvVisiteurVille.Name = "dgvVisiteurVille";
+            this.dgvVisiteurVille.Width = 70;
+            // 
+            // dgvVisiteurDateEmbauche
+            // 
+            this.dgvVisiteurDateEmbauche.HeaderText = "Date d\'embauche";
+            this.dgvVisiteurDateEmbauche.Name = "dgvVisiteurDateEmbauche";
+            this.dgvVisiteurDateEmbauche.Width = 70;
+            // 
+            // dgvVisiteurSecteur
+            // 
+            this.dgvVisiteurSecteur.HeaderText = "Secteur";
+            this.dgvVisiteurSecteur.Name = "dgvVisiteurSecteur";
+            this.dgvVisiteurSecteur.Width = 70;
+            // 
+            // dgvVisiteurLogin
+            // 
+            this.dgvVisiteurLogin.HeaderText = "Login";
+            this.dgvVisiteurLogin.Name = "dgvVisiteurLogin";
+            this.dgvVisiteurLogin.Width = 70;
+            // 
+            // dgvVisiteurMdp
+            // 
+            this.dgvVisiteurMdp.HeaderText = "Mdp";
+            this.dgvVisiteurMdp.Name = "dgvVisiteurMdp";
+            this.dgvVisiteurMdp.Width = 70;
+            // 
+            // cbxVisiteurSecteur
+            // 
+            this.cbxVisiteurSecteur.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.cbxVisiteurSecteur.FormattingEnabled = true;
+            this.cbxVisiteurSecteur.Location = new System.Drawing.Point(910, 354);
+            this.cbxVisiteurSecteur.Name = "cbxVisiteurSecteur";
+            this.cbxVisiteurSecteur.Size = new System.Drawing.Size(160, 21);
+            this.cbxVisiteurSecteur.TabIndex = 26;
+            // 
+            // lblVisiteurDateEmbauche
+            // 
+            this.lblVisiteurDateEmbauche.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblVisiteurDateEmbauche.AutoSize = true;
+            this.lblVisiteurDateEmbauche.Font = new System.Drawing.Font("Constantia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblVisiteurDateEmbauche.Location = new System.Drawing.Point(762, 323);
+            this.lblVisiteurDateEmbauche.Name = "lblVisiteurDateEmbauche";
+            this.lblVisiteurDateEmbauche.Size = new System.Drawing.Size(139, 19);
+            this.lblVisiteurDateEmbauche.TabIndex = 25;
+            this.lblVisiteurDateEmbauche.Text = "Date d\'embauche :";
+            // 
+            // txbVisiteurDateEmbauche
+            // 
+            this.txbVisiteurDateEmbauche.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txbVisiteurDateEmbauche.Location = new System.Drawing.Point(910, 322);
+            this.txbVisiteurDateEmbauche.Name = "txbVisiteurDateEmbauche";
+            this.txbVisiteurDateEmbauche.Size = new System.Drawing.Size(160, 20);
+            this.txbVisiteurDateEmbauche.TabIndex = 24;
+            // 
+            // lblVisiteurSecteur
+            // 
+            this.lblVisiteurSecteur.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblVisiteurSecteur.AutoSize = true;
+            this.lblVisiteurSecteur.Font = new System.Drawing.Font("Constantia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblVisiteurSecteur.Location = new System.Drawing.Point(833, 356);
+            this.lblVisiteurSecteur.Name = "lblVisiteurSecteur";
+            this.lblVisiteurSecteur.Size = new System.Drawing.Size(68, 19);
+            this.lblVisiteurSecteur.TabIndex = 23;
+            this.lblVisiteurSecteur.Text = "Secteur :";
+            // 
+            // lblVisiteurLogin
+            // 
+            this.lblVisiteurLogin.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblVisiteurLogin.AutoSize = true;
+            this.lblVisiteurLogin.Font = new System.Drawing.Font("Constantia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblVisiteurLogin.Location = new System.Drawing.Point(847, 390);
+            this.lblVisiteurLogin.Name = "lblVisiteurLogin";
+            this.lblVisiteurLogin.Size = new System.Drawing.Size(57, 19);
+            this.lblVisiteurLogin.TabIndex = 21;
+            this.lblVisiteurLogin.Text = "Login :";
+            // 
+            // txbVisiteurLogin
+            // 
+            this.txbVisiteurLogin.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txbVisiteurLogin.Location = new System.Drawing.Point(910, 389);
+            this.txbVisiteurLogin.Name = "txbVisiteurLogin";
+            this.txbVisiteurLogin.Size = new System.Drawing.Size(160, 20);
+            this.txbVisiteurLogin.TabIndex = 20;
+            // 
+            // lblVisiteurMdp
+            // 
+            this.lblVisiteurMdp.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblVisiteurMdp.AutoSize = true;
+            this.lblVisiteurMdp.Font = new System.Drawing.Font("Constantia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblVisiteurMdp.Location = new System.Drawing.Point(796, 421);
+            this.lblVisiteurMdp.Name = "lblVisiteurMdp";
+            this.lblVisiteurMdp.Size = new System.Drawing.Size(108, 19);
+            this.lblVisiteurMdp.TabIndex = 19;
+            this.lblVisiteurMdp.Text = "Mot de Passe :";
+            // 
+            // txbVisiteurMdp
+            // 
+            this.txbVisiteurMdp.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txbVisiteurMdp.Location = new System.Drawing.Point(910, 422);
+            this.txbVisiteurMdp.Name = "txbVisiteurMdp";
+            this.txbVisiteurMdp.Size = new System.Drawing.Size(160, 20);
+            this.txbVisiteurMdp.TabIndex = 18;
+            // 
+            // lblVisiteurCodePostal
+            // 
+            this.lblVisiteurCodePostal.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblVisiteurCodePostal.AutoSize = true;
+            this.lblVisiteurCodePostal.Font = new System.Drawing.Font("Constantia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblVisiteurCodePostal.Location = new System.Drawing.Point(804, 255);
+            this.lblVisiteurCodePostal.Name = "lblVisiteurCodePostal";
+            this.lblVisiteurCodePostal.Size = new System.Drawing.Size(100, 19);
+            this.lblVisiteurCodePostal.TabIndex = 17;
+            this.lblVisiteurCodePostal.Text = "Code Postal :";
+            // 
+            // txbVisiteurCP
+            // 
+            this.txbVisiteurCP.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txbVisiteurCP.Location = new System.Drawing.Point(910, 254);
+            this.txbVisiteurCP.Name = "txbVisiteurCP";
+            this.txbVisiteurCP.Size = new System.Drawing.Size(160, 20);
+            this.txbVisiteurCP.TabIndex = 16;
+            // 
+            // lblVisiteurVille
+            // 
+            this.lblVisiteurVille.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblVisiteurVille.AutoSize = true;
+            this.lblVisiteurVille.Font = new System.Drawing.Font("Constantia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblVisiteurVille.Location = new System.Drawing.Point(850, 290);
+            this.lblVisiteurVille.Name = "lblVisiteurVille";
+            this.lblVisiteurVille.Size = new System.Drawing.Size(51, 19);
+            this.lblVisiteurVille.TabIndex = 15;
+            this.lblVisiteurVille.Text = "Ville :";
+            // 
+            // txbVisiteurVille
+            // 
+            this.txbVisiteurVille.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txbVisiteurVille.Location = new System.Drawing.Point(910, 289);
+            this.txbVisiteurVille.Name = "txbVisiteurVille";
+            this.txbVisiteurVille.Size = new System.Drawing.Size(160, 20);
+            this.txbVisiteurVille.TabIndex = 14;
+            // 
+            // lblVisiteurID
+            // 
+            this.lblVisiteurID.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblVisiteurID.AutoSize = true;
+            this.lblVisiteurID.Font = new System.Drawing.Font("Constantia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblVisiteurID.Location = new System.Drawing.Point(867, 73);
+            this.lblVisiteurID.Name = "lblVisiteurID";
+            this.lblVisiteurID.Size = new System.Drawing.Size(34, 19);
+            this.lblVisiteurID.TabIndex = 13;
+            this.lblVisiteurID.Text = "ID :";
+            // 
+            // lblVisiteurNom
+            // 
+            this.lblVisiteurNom.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblVisiteurNom.AutoSize = true;
+            this.lblVisiteurNom.Font = new System.Drawing.Font("Constantia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblVisiteurNom.Location = new System.Drawing.Point(849, 111);
+            this.lblVisiteurNom.Name = "lblVisiteurNom";
+            this.lblVisiteurNom.Size = new System.Drawing.Size(52, 19);
+            this.lblVisiteurNom.TabIndex = 12;
+            this.lblVisiteurNom.Text = "Nom :";
+            // 
+            // lblVisiteurPrenom
+            // 
+            this.lblVisiteurPrenom.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblVisiteurPrenom.AutoSize = true;
+            this.lblVisiteurPrenom.Font = new System.Drawing.Font("Constantia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblVisiteurPrenom.Location = new System.Drawing.Point(832, 148);
+            this.lblVisiteurPrenom.Name = "lblVisiteurPrenom";
+            this.lblVisiteurPrenom.Size = new System.Drawing.Size(72, 19);
+            this.lblVisiteurPrenom.TabIndex = 11;
+            this.lblVisiteurPrenom.Text = "Prénom :";
+            // 
+            // lblVisiteurType
+            // 
+            this.lblVisiteurType.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblVisiteurType.AutoSize = true;
+            this.lblVisiteurType.Font = new System.Drawing.Font("Constantia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblVisiteurType.Location = new System.Drawing.Point(853, 183);
+            this.lblVisiteurType.Name = "lblVisiteurType";
+            this.lblVisiteurType.Size = new System.Drawing.Size(51, 19);
+            this.lblVisiteurType.TabIndex = 10;
+            this.lblVisiteurType.Text = "Type :";
+            // 
+            // lblVisiteurAdresse
+            // 
+            this.lblVisiteurAdresse.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblVisiteurAdresse.AutoSize = true;
+            this.lblVisiteurAdresse.Font = new System.Drawing.Font("Constantia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblVisiteurAdresse.Location = new System.Drawing.Point(833, 219);
+            this.lblVisiteurAdresse.Name = "lblVisiteurAdresse";
+            this.lblVisiteurAdresse.Size = new System.Drawing.Size(71, 19);
+            this.lblVisiteurAdresse.TabIndex = 9;
+            this.lblVisiteurAdresse.Text = "Adresse :";
+            // 
+            // lblRecherche
+            // 
+            this.lblRecherche.AutoSize = true;
+            this.lblRecherche.Font = new System.Drawing.Font("Constantia", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRecherche.Location = new System.Drawing.Point(316, 97);
+            this.lblRecherche.Name = "lblRecherche";
+            this.lblRecherche.Size = new System.Drawing.Size(192, 19);
+            this.lblRecherche.TabIndex = 7;
+            this.lblRecherche.Text = "Rechercher un Visiteur :";
+            // 
+            // txbVisiteurNom
+            // 
+            this.txbVisiteurNom.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txbVisiteurNom.Location = new System.Drawing.Point(910, 110);
+            this.txbVisiteurNom.Name = "txbVisiteurNom";
+            this.txbVisiteurNom.Size = new System.Drawing.Size(160, 20);
+            this.txbVisiteurNom.TabIndex = 6;
+            // 
+            // txbVisiteurPrenom
+            // 
+            this.txbVisiteurPrenom.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txbVisiteurPrenom.Location = new System.Drawing.Point(910, 149);
+            this.txbVisiteurPrenom.Name = "txbVisiteurPrenom";
+            this.txbVisiteurPrenom.Size = new System.Drawing.Size(160, 20);
+            this.txbVisiteurPrenom.TabIndex = 5;
+            // 
+            // txbVisiteurType
+            // 
+            this.txbVisiteurType.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txbVisiteurType.Location = new System.Drawing.Point(910, 182);
+            this.txbVisiteurType.Name = "txbVisiteurType";
+            this.txbVisiteurType.Size = new System.Drawing.Size(160, 20);
+            this.txbVisiteurType.TabIndex = 4;
+            // 
+            // txbVisiteurAdresse
+            // 
+            this.txbVisiteurAdresse.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txbVisiteurAdresse.Location = new System.Drawing.Point(910, 218);
+            this.txbVisiteurAdresse.Name = "txbVisiteurAdresse";
+            this.txbVisiteurAdresse.Size = new System.Drawing.Size(160, 20);
+            this.txbVisiteurAdresse.TabIndex = 3;
+            // 
+            // txbVisiteurID
+            // 
+            this.txbVisiteurID.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txbVisiteurID.Location = new System.Drawing.Point(910, 72);
+            this.txbVisiteurID.Name = "txbVisiteurID";
+            this.txbVisiteurID.Size = new System.Drawing.Size(160, 20);
+            this.txbVisiteurID.TabIndex = 2;
+            // 
+            // txbVisiteurRecherche
+            // 
+            this.txbVisiteurRecherche.Location = new System.Drawing.Point(514, 97);
+            this.txbVisiteurRecherche.Name = "txbVisiteurRecherche";
+            this.txbVisiteurRecherche.Size = new System.Drawing.Size(160, 20);
+            this.txbVisiteurRecherche.TabIndex = 1;
+            // 
+            // lblVisiteurs
+            // 
+            this.lblVisiteurs.AutoSize = true;
+            this.lblVisiteurs.Font = new System.Drawing.Font("Constantia", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblVisiteurs.Location = new System.Drawing.Point(325, 17);
+            this.lblVisiteurs.Name = "lblVisiteurs";
+            this.lblVisiteurs.Size = new System.Drawing.Size(365, 42);
+            this.lblVisiteurs.TabIndex = 0;
+            this.lblVisiteurs.Text = "Gestion des Visiteurs";
             // 
             // tabPage3
             // 
@@ -724,391 +1113,6 @@
             this.lblPraticiens.TabIndex = 0;
             this.lblPraticiens.Text = "Gestion des Praticiens";
             // 
-            // lblVisiteurs
-            // 
-            this.lblVisiteurs.AutoSize = true;
-            this.lblVisiteurs.Font = new System.Drawing.Font("Constantia", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblVisiteurs.Location = new System.Drawing.Point(325, 17);
-            this.lblVisiteurs.Name = "lblVisiteurs";
-            this.lblVisiteurs.Size = new System.Drawing.Size(365, 42);
-            this.lblVisiteurs.TabIndex = 0;
-            this.lblVisiteurs.Text = "Gestion des Visiteurs";
-            // 
-            // txbVisiteurRecherche
-            // 
-            this.txbVisiteurRecherche.Location = new System.Drawing.Point(514, 97);
-            this.txbVisiteurRecherche.Name = "txbVisiteurRecherche";
-            this.txbVisiteurRecherche.Size = new System.Drawing.Size(160, 20);
-            this.txbVisiteurRecherche.TabIndex = 1;
-            // 
-            // txbVisiteurID
-            // 
-            this.txbVisiteurID.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txbVisiteurID.Location = new System.Drawing.Point(910, 72);
-            this.txbVisiteurID.Name = "txbVisiteurID";
-            this.txbVisiteurID.Size = new System.Drawing.Size(160, 20);
-            this.txbVisiteurID.TabIndex = 2;
-            // 
-            // txbVisiteurAdresse
-            // 
-            this.txbVisiteurAdresse.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txbVisiteurAdresse.Location = new System.Drawing.Point(910, 218);
-            this.txbVisiteurAdresse.Name = "txbVisiteurAdresse";
-            this.txbVisiteurAdresse.Size = new System.Drawing.Size(160, 20);
-            this.txbVisiteurAdresse.TabIndex = 3;
-            // 
-            // txbVisiteurType
-            // 
-            this.txbVisiteurType.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txbVisiteurType.Location = new System.Drawing.Point(910, 182);
-            this.txbVisiteurType.Name = "txbVisiteurType";
-            this.txbVisiteurType.Size = new System.Drawing.Size(160, 20);
-            this.txbVisiteurType.TabIndex = 4;
-            // 
-            // txbVisiteurPrenom
-            // 
-            this.txbVisiteurPrenom.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txbVisiteurPrenom.Location = new System.Drawing.Point(910, 149);
-            this.txbVisiteurPrenom.Name = "txbVisiteurPrenom";
-            this.txbVisiteurPrenom.Size = new System.Drawing.Size(160, 20);
-            this.txbVisiteurPrenom.TabIndex = 5;
-            // 
-            // txbVisiteurNom
-            // 
-            this.txbVisiteurNom.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txbVisiteurNom.Location = new System.Drawing.Point(910, 110);
-            this.txbVisiteurNom.Name = "txbVisiteurNom";
-            this.txbVisiteurNom.Size = new System.Drawing.Size(160, 20);
-            this.txbVisiteurNom.TabIndex = 6;
-            // 
-            // lblRecherche
-            // 
-            this.lblRecherche.AutoSize = true;
-            this.lblRecherche.Font = new System.Drawing.Font("Constantia", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRecherche.Location = new System.Drawing.Point(316, 97);
-            this.lblRecherche.Name = "lblRecherche";
-            this.lblRecherche.Size = new System.Drawing.Size(192, 19);
-            this.lblRecherche.TabIndex = 7;
-            this.lblRecherche.Text = "Rechercher un Visiteur :";
-            // 
-            // lblVisiteurAdresse
-            // 
-            this.lblVisiteurAdresse.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblVisiteurAdresse.AutoSize = true;
-            this.lblVisiteurAdresse.Font = new System.Drawing.Font("Constantia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblVisiteurAdresse.Location = new System.Drawing.Point(833, 219);
-            this.lblVisiteurAdresse.Name = "lblVisiteurAdresse";
-            this.lblVisiteurAdresse.Size = new System.Drawing.Size(71, 19);
-            this.lblVisiteurAdresse.TabIndex = 9;
-            this.lblVisiteurAdresse.Text = "Adresse :";
-            // 
-            // lblVisiteurType
-            // 
-            this.lblVisiteurType.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblVisiteurType.AutoSize = true;
-            this.lblVisiteurType.Font = new System.Drawing.Font("Constantia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblVisiteurType.Location = new System.Drawing.Point(853, 183);
-            this.lblVisiteurType.Name = "lblVisiteurType";
-            this.lblVisiteurType.Size = new System.Drawing.Size(51, 19);
-            this.lblVisiteurType.TabIndex = 10;
-            this.lblVisiteurType.Text = "Type :";
-            // 
-            // lblVisiteurPrenom
-            // 
-            this.lblVisiteurPrenom.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblVisiteurPrenom.AutoSize = true;
-            this.lblVisiteurPrenom.Font = new System.Drawing.Font("Constantia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblVisiteurPrenom.Location = new System.Drawing.Point(832, 148);
-            this.lblVisiteurPrenom.Name = "lblVisiteurPrenom";
-            this.lblVisiteurPrenom.Size = new System.Drawing.Size(72, 19);
-            this.lblVisiteurPrenom.TabIndex = 11;
-            this.lblVisiteurPrenom.Text = "Prénom :";
-            // 
-            // lblVisiteurNom
-            // 
-            this.lblVisiteurNom.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblVisiteurNom.AutoSize = true;
-            this.lblVisiteurNom.Font = new System.Drawing.Font("Constantia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblVisiteurNom.Location = new System.Drawing.Point(849, 111);
-            this.lblVisiteurNom.Name = "lblVisiteurNom";
-            this.lblVisiteurNom.Size = new System.Drawing.Size(52, 19);
-            this.lblVisiteurNom.TabIndex = 12;
-            this.lblVisiteurNom.Text = "Nom :";
-            // 
-            // lblVisiteurID
-            // 
-            this.lblVisiteurID.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblVisiteurID.AutoSize = true;
-            this.lblVisiteurID.Font = new System.Drawing.Font("Constantia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblVisiteurID.Location = new System.Drawing.Point(867, 73);
-            this.lblVisiteurID.Name = "lblVisiteurID";
-            this.lblVisiteurID.Size = new System.Drawing.Size(34, 19);
-            this.lblVisiteurID.TabIndex = 13;
-            this.lblVisiteurID.Text = "ID :";
-            // 
-            // lblVisiteurVille
-            // 
-            this.lblVisiteurVille.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblVisiteurVille.AutoSize = true;
-            this.lblVisiteurVille.Font = new System.Drawing.Font("Constantia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblVisiteurVille.Location = new System.Drawing.Point(850, 290);
-            this.lblVisiteurVille.Name = "lblVisiteurVille";
-            this.lblVisiteurVille.Size = new System.Drawing.Size(51, 19);
-            this.lblVisiteurVille.TabIndex = 15;
-            this.lblVisiteurVille.Text = "Ville :";
-            // 
-            // txbVisiteurVille
-            // 
-            this.txbVisiteurVille.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txbVisiteurVille.Location = new System.Drawing.Point(910, 289);
-            this.txbVisiteurVille.Name = "txbVisiteurVille";
-            this.txbVisiteurVille.Size = new System.Drawing.Size(160, 20);
-            this.txbVisiteurVille.TabIndex = 14;
-            // 
-            // lblVisiteurCodePostal
-            // 
-            this.lblVisiteurCodePostal.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblVisiteurCodePostal.AutoSize = true;
-            this.lblVisiteurCodePostal.Font = new System.Drawing.Font("Constantia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblVisiteurCodePostal.Location = new System.Drawing.Point(804, 255);
-            this.lblVisiteurCodePostal.Name = "lblVisiteurCodePostal";
-            this.lblVisiteurCodePostal.Size = new System.Drawing.Size(100, 19);
-            this.lblVisiteurCodePostal.TabIndex = 17;
-            this.lblVisiteurCodePostal.Text = "Code Postal :";
-            // 
-            // txbVisiteurCP
-            // 
-            this.txbVisiteurCP.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txbVisiteurCP.Location = new System.Drawing.Point(910, 254);
-            this.txbVisiteurCP.Name = "txbVisiteurCP";
-            this.txbVisiteurCP.Size = new System.Drawing.Size(160, 20);
-            this.txbVisiteurCP.TabIndex = 16;
-            // 
-            // lblVisiteurMdp
-            // 
-            this.lblVisiteurMdp.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblVisiteurMdp.AutoSize = true;
-            this.lblVisiteurMdp.Font = new System.Drawing.Font("Constantia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblVisiteurMdp.Location = new System.Drawing.Point(796, 421);
-            this.lblVisiteurMdp.Name = "lblVisiteurMdp";
-            this.lblVisiteurMdp.Size = new System.Drawing.Size(108, 19);
-            this.lblVisiteurMdp.TabIndex = 19;
-            this.lblVisiteurMdp.Text = "Mot de Passe :";
-            // 
-            // txbVisiteurMdp
-            // 
-            this.txbVisiteurMdp.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txbVisiteurMdp.Location = new System.Drawing.Point(910, 422);
-            this.txbVisiteurMdp.Name = "txbVisiteurMdp";
-            this.txbVisiteurMdp.Size = new System.Drawing.Size(160, 20);
-            this.txbVisiteurMdp.TabIndex = 18;
-            // 
-            // lblVisiteurLogin
-            // 
-            this.lblVisiteurLogin.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblVisiteurLogin.AutoSize = true;
-            this.lblVisiteurLogin.Font = new System.Drawing.Font("Constantia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblVisiteurLogin.Location = new System.Drawing.Point(847, 390);
-            this.lblVisiteurLogin.Name = "lblVisiteurLogin";
-            this.lblVisiteurLogin.Size = new System.Drawing.Size(57, 19);
-            this.lblVisiteurLogin.TabIndex = 21;
-            this.lblVisiteurLogin.Text = "Login :";
-            // 
-            // txbVisiteurLogin
-            // 
-            this.txbVisiteurLogin.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txbVisiteurLogin.Location = new System.Drawing.Point(910, 389);
-            this.txbVisiteurLogin.Name = "txbVisiteurLogin";
-            this.txbVisiteurLogin.Size = new System.Drawing.Size(160, 20);
-            this.txbVisiteurLogin.TabIndex = 20;
-            // 
-            // lblVisiteurSecteur
-            // 
-            this.lblVisiteurSecteur.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblVisiteurSecteur.AutoSize = true;
-            this.lblVisiteurSecteur.Font = new System.Drawing.Font("Constantia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblVisiteurSecteur.Location = new System.Drawing.Point(833, 356);
-            this.lblVisiteurSecteur.Name = "lblVisiteurSecteur";
-            this.lblVisiteurSecteur.Size = new System.Drawing.Size(68, 19);
-            this.lblVisiteurSecteur.TabIndex = 23;
-            this.lblVisiteurSecteur.Text = "Secteur :";
-            // 
-            // lblVisiteurDateEmbauche
-            // 
-            this.lblVisiteurDateEmbauche.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblVisiteurDateEmbauche.AutoSize = true;
-            this.lblVisiteurDateEmbauche.Font = new System.Drawing.Font("Constantia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblVisiteurDateEmbauche.Location = new System.Drawing.Point(762, 323);
-            this.lblVisiteurDateEmbauche.Name = "lblVisiteurDateEmbauche";
-            this.lblVisiteurDateEmbauche.Size = new System.Drawing.Size(139, 19);
-            this.lblVisiteurDateEmbauche.TabIndex = 25;
-            this.lblVisiteurDateEmbauche.Text = "Date d\'embauche :";
-            // 
-            // txbVisiteurDateEmbauche
-            // 
-            this.txbVisiteurDateEmbauche.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txbVisiteurDateEmbauche.Location = new System.Drawing.Point(910, 322);
-            this.txbVisiteurDateEmbauche.Name = "txbVisiteurDateEmbauche";
-            this.txbVisiteurDateEmbauche.Size = new System.Drawing.Size(160, 20);
-            this.txbVisiteurDateEmbauche.TabIndex = 24;
-            // 
-            // txbVisiteurSecteur
-            // 
-            this.txbVisiteurSecteur.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txbVisiteurSecteur.FormattingEnabled = true;
-            this.txbVisiteurSecteur.Location = new System.Drawing.Point(910, 354);
-            this.txbVisiteurSecteur.Name = "txbVisiteurSecteur";
-            this.txbVisiteurSecteur.Size = new System.Drawing.Size(160, 21);
-            this.txbVisiteurSecteur.TabIndex = 26;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dgvVisiteurID,
-            this.dgvVisiteurNom,
-            this.dgvVisiteurPrenom,
-            this.dgvVisiteurType,
-            this.dgvVisiteurAdresse,
-            this.dgvVisiteurCP,
-            this.dgvVisiteurVille,
-            this.dgvVisiteurDateEmbauche,
-            this.dgvVisiteurSecteur,
-            this.dgvVisiteurLogin,
-            this.dgvVisiteurMdp});
-            this.dataGridView1.Location = new System.Drawing.Point(10, 149);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(753, 305);
-            this.dataGridView1.TabIndex = 27;
-            // 
-            // btnVisiteurRafraichir
-            // 
-            this.btnVisiteurRafraichir.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVisiteurRafraichir.Location = new System.Drawing.Point(38, 37);
-            this.btnVisiteurRafraichir.Name = "btnVisiteurRafraichir";
-            this.btnVisiteurRafraichir.Size = new System.Drawing.Size(105, 34);
-            this.btnVisiteurRafraichir.TabIndex = 28;
-            this.btnVisiteurRafraichir.Text = "Rafraîchir";
-            this.btnVisiteurRafraichir.UseVisualStyleBackColor = true;
-            // 
-            // btnVisiteurSupprimer
-            // 
-            this.btnVisiteurSupprimer.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVisiteurSupprimer.Location = new System.Drawing.Point(182, 97);
-            this.btnVisiteurSupprimer.Name = "btnVisiteurSupprimer";
-            this.btnVisiteurSupprimer.Size = new System.Drawing.Size(105, 34);
-            this.btnVisiteurSupprimer.TabIndex = 29;
-            this.btnVisiteurSupprimer.Text = "Supprimer";
-            this.btnVisiteurSupprimer.UseVisualStyleBackColor = true;
-            // 
-            // btnVisiteurAjouter
-            // 
-            this.btnVisiteurAjouter.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVisiteurAjouter.Location = new System.Drawing.Point(38, 97);
-            this.btnVisiteurAjouter.Name = "btnVisiteurAjouter";
-            this.btnVisiteurAjouter.Size = new System.Drawing.Size(105, 34);
-            this.btnVisiteurAjouter.TabIndex = 30;
-            this.btnVisiteurAjouter.Text = "Ajouter";
-            this.btnVisiteurAjouter.UseVisualStyleBackColor = true;
-            // 
-            // btnVisiteurModifier
-            // 
-            this.btnVisiteurModifier.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVisiteurModifier.Location = new System.Drawing.Point(182, 37);
-            this.btnVisiteurModifier.Name = "btnVisiteurModifier";
-            this.btnVisiteurModifier.Size = new System.Drawing.Size(105, 34);
-            this.btnVisiteurModifier.TabIndex = 31;
-            this.btnVisiteurModifier.Text = "Modifier";
-            this.btnVisiteurModifier.UseVisualStyleBackColor = true;
-            // 
-            // dgvVisiteurID
-            // 
-            this.dgvVisiteurID.HeaderText = "ID";
-            this.dgvVisiteurID.Name = "dgvVisiteurID";
-            this.dgvVisiteurID.Width = 30;
-            // 
-            // dgvVisiteurNom
-            // 
-            this.dgvVisiteurNom.HeaderText = "Nom";
-            this.dgvVisiteurNom.Name = "dgvVisiteurNom";
-            this.dgvVisiteurNom.Width = 70;
-            // 
-            // dgvVisiteurPrenom
-            // 
-            this.dgvVisiteurPrenom.HeaderText = "Prénom";
-            this.dgvVisiteurPrenom.Name = "dgvVisiteurPrenom";
-            this.dgvVisiteurPrenom.Width = 70;
-            // 
-            // dgvVisiteurType
-            // 
-            this.dgvVisiteurType.HeaderText = "Type";
-            this.dgvVisiteurType.Name = "dgvVisiteurType";
-            this.dgvVisiteurType.Width = 70;
-            // 
-            // dgvVisiteurAdresse
-            // 
-            this.dgvVisiteurAdresse.HeaderText = "Adresse";
-            this.dgvVisiteurAdresse.Name = "dgvVisiteurAdresse";
-            this.dgvVisiteurAdresse.Width = 70;
-            // 
-            // dgvVisiteurCP
-            // 
-            this.dgvVisiteurCP.HeaderText = "CP";
-            this.dgvVisiteurCP.Name = "dgvVisiteurCP";
-            this.dgvVisiteurCP.Width = 50;
-            // 
-            // dgvVisiteurVille
-            // 
-            this.dgvVisiteurVille.HeaderText = "Ville";
-            this.dgvVisiteurVille.Name = "dgvVisiteurVille";
-            this.dgvVisiteurVille.Width = 70;
-            // 
-            // dgvVisiteurDateEmbauche
-            // 
-            this.dgvVisiteurDateEmbauche.HeaderText = "Date d\'embauche";
-            this.dgvVisiteurDateEmbauche.Name = "dgvVisiteurDateEmbauche";
-            this.dgvVisiteurDateEmbauche.Width = 70;
-            // 
-            // dgvVisiteurSecteur
-            // 
-            this.dgvVisiteurSecteur.HeaderText = "Secteur";
-            this.dgvVisiteurSecteur.Name = "dgvVisiteurSecteur";
-            this.dgvVisiteurSecteur.Width = 70;
-            // 
-            // dgvVisiteurLogin
-            // 
-            this.dgvVisiteurLogin.HeaderText = "Login";
-            this.dgvVisiteurLogin.Name = "dgvVisiteurLogin";
-            this.dgvVisiteurLogin.Width = 70;
-            // 
-            // dgvVisiteurMdp
-            // 
-            this.dgvVisiteurMdp.HeaderText = "Mdp";
-            this.dgvVisiteurMdp.Name = "dgvVisiteurMdp";
-            this.dgvVisiteurMdp.Width = 70;
-            // 
             // GsbAccueil
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1124,9 +1128,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvProduits)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvVisiteurs)).EndInit();
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1212,8 +1216,8 @@
         private System.Windows.Forms.Label lblVisiteurPrenom;
         private System.Windows.Forms.Label lblVisiteurType;
         private System.Windows.Forms.Label lblVisiteurAdresse;
-        private System.Windows.Forms.ComboBox txbVisiteurSecteur;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.ComboBox cbxVisiteurSecteur;
+        private System.Windows.Forms.DataGridView dgvVisiteurs;
         private System.Windows.Forms.Button btnVisiteurModifier;
         private System.Windows.Forms.Button btnVisiteurAjouter;
         private System.Windows.Forms.Button btnVisiteurSupprimer;
