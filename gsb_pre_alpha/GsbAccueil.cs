@@ -214,10 +214,10 @@ namespace gsb_pre_alpha
             }
         }
 
-        private void btnVisiteurSupprimer_Click(object sender, EventArgs e)
-        {
-            Visiteur v = new Visiteur(Int32.Parse(txtReference.Text));
-            DAOVisiteur.SupprimerVisiteur(v);
-        }
+        //private void btnVisiteurSupprimer_Click(object sender, EventArgs e)
+        //{
+        //    Visiteur v = new Visiteur(Int32.Parse(txtReference.Text));
+        //    DAOVisiteur.SupprimerVisiteur(v);
+        //}
     }
 }
